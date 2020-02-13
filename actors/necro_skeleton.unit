@@ -1,0 +1,264 @@
+<unit netsync="position" save="false" slot="actor">
+	<behavior class="PlayerOwnedSummon">
+		
+		<string name="team">player</string>
+			
+		<string name="type">undead</string>
+		<int name="hp">50</int>
+		<int name="armor">10</int>
+		<int name="resistance">5</int>
+		
+		<int name="overhead-bossbar-width">16</int>
+		<int name="ttl">300000</int>
+		<float name="block-projectile-chance">0.5</float>
+		<bool name="use-player-colors">true</bool>
+				
+		<string name="death-snd">event:/enemy/skeleton/death</string>
+		<string name="gore">effects/gibs/gib_skeleton_1.sval</string>
+				
+		<int name="aggro-range">200</int>
+		
+		<array name="buffs-immune-tags">
+			<string>players</string>
+		</array>
+
+		<dict name="movement">
+			<string name="class">MeleeFollowerMovement</string>
+			<string name="anim-idle">idle 8</string>
+			<string name="anim-walk">walk 8</string>
+
+			<float name="speed">1.6</float>
+			<float name="run-back-speed">3.6</float>
+			<float name="roaming">0.3</float>
+			<int name="roaming-distance">40</int>
+			<int name="run-back-distance">100</int>
+		</dict>
+
+		<array name="skills">
+			<dict>
+				<string name="class">CompositeActorSkill</string>
+				<string name="anim">attack 8</string>
+
+				<int name="cooldown">200</int>
+				<int name="castpoint">150</int>
+				<int name="range">26</int>
+				
+				<string name="offset">attack-pos</string>
+				
+				<array name="actions">
+					<dict>
+						<string name="class">Explode</string>
+						<int name="min-radius">8</int>
+						<int name="radius">8</int>
+						<float name="dist-scaling">1000</float>
+						<float name="team-dmg">0</float>
+						<array name="effects">
+							<dict>
+								<string name="class">Damage</string>
+								<int name="physical">40</int>
+								<bool name="melee">true</bool>
+							</dict>
+						</array>
+					</dict>
+				</array>				
+			</dict>
+		</array>
+	</behavior>
+
+	<scenes start="idle-0 idle-1 idle-2 idle-3 idle-4 idle-5 idle-6 idle-7">
+		<scene name="shared">
+			<minimap_sprite layer="1" origin="1 1" texture="gui/minimap.png" frame="94 3 2 2"/>
+			
+			<effect src="actors/necro_skeleton_map.effect" />
+			
+			<collision static="false">
+				
+				<circle offset="0 -5.25" sensor="true" shoot-through="false" aim-through="true" radius="3.5" />
+			</collision>
+		</scene>
+
+		<scene name="idle-0">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame>0 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-7">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame>24 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-6">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame>48 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-5">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame>72 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-4">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame>96 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-3">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame>120 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-2">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame>144 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-1">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame>168 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-0">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="225">0 24 24 24</frame>
+				<frame time="225">0 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-7">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="225">24 24 24 24</frame>
+				<frame time="225">24 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-6">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="225">48 24 24 24</frame>
+				<frame time="225">48 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-5">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="225">72 24 24 24</frame>
+				<frame time="225">72 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-4">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="225">96 24 24 24</frame>
+				<frame time="225">96 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-3">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="225">120 24 24 24</frame>
+				<frame time="225">120 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-2">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="225">144 24 24 24</frame>
+				<frame time="225">144 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-1">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="225">168 24 24 24</frame>
+				<frame time="225">168 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="attack-0">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="false" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="400">0 72 24 24</frame>
+				<frame time="200">0 96 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="attack-7">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="false" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="400">24 72 24 24</frame>
+				<frame time="200">24 96 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="attack-6">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="false" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="400">48 72 24 24</frame>
+				<frame time="200">48 96 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="attack-5">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="false" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="400">72 72 24 24</frame>
+				<frame time="200">72 96 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="attack-4">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="false" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="400">96 72 24 24</frame>
+				<frame time="200">96 96 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="attack-3">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="false" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="400">120 72 24 24</frame>
+				<frame time="200">120 96 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="attack-2">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="false" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="400">144 72 24 24</frame>
+				<frame time="200">144 96 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="attack-1">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="false" texture="actors/necro_skeleton.png" material="system/default.mats:ally">
+				<frame time="400">168 72 24 24</frame>
+				<frame time="200">168 96 24 24</frame>
+			</sprite>
+		</scene>
+	</scenes>
+</unit>

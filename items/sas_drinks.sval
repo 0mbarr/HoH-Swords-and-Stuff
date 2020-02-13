@@ -1,0 +1,83 @@
+<loader>AddDrinkFile</loader>
+<dict>
+	<dict name="whispers-tears">
+		<string name="name">Whisper's Tears</string>
+		<string name="desc">+15% Evasion +30% Damage Taken.</string>
+		<string name="quality">common</string>
+		<int name="cost">750</int>
+			
+		<array name="icon">
+			<string>gui/sastavern.png</string>
+			<int>100</int><vec4>0 0 24 24</vec4>
+		</array>
+
+		<array name="modifiers">
+			<dict>
+				<string name="class">Modifiers::Evade</string>
+				<float name="chance">0.15</float>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::Armor</string>
+				<float name="damage-taken-mul">1.3</float>
+			</dict>
+		</array>
+	</dict>
+	
+	<dict name="pink-eye">
+		<string name="name">Pink Eye</string>
+		<string name="desc">+20% Crit Chance -30 Attack and Skill Power.</string>
+		<string name="quality">common</string>
+		<int name="cost">750</int>
+			
+		<array name="icon">
+			<string>gui/sastavern.png</string>
+			<int>100</int><vec4>24 0 24 24</vec4>
+		</array>
+
+		<array name="modifiers">
+			<dict>
+				<string name="class">Modifiers::CriticalHit</string>
+				<float name="chance">0.20</float>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::Damage</string>
+				<int name="attack-power">-30</int>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::Damage</string>
+				<int name="spell-power">-30</int>
+			</dict>
+		</array>
+	</dict>
+	
+	<dict name="siegbrau">
+		<string name="name">Victory Brew</string>
+		<string name="desc">Frost Immunity, +50% health -50% Movment Speed</string> 
+		<string name="quality">uncommon</string>
+		<int name="cost">2500</int>
+		
+		<array name="icon">
+			<string>gui/sastavern.png</string>
+			<int>100</int><vec4>48 0 24 24</vec4>
+		</array>
+		
+		<array name="modifiers">
+			<dict>
+				<string name="class">Modifiers::StatsBase</string>
+				<float name="health">0.5</float>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::Speed</string>
+				<float name="movement-mul">0.5</float>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::BuffImmune</string>
+				<array name="tags">
+					<string>slow</string>
+					<string>freezing</string>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	
+</dict>

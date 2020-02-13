@@ -1,0 +1,13 @@
+<dict>
+  <string name="name">Swords and Stuff</string>
+  <string name="author">0mbarr</string>
+  <string name="description">Version 1.6 This mod adds 121 Items that are either Swords or Stuff(or Staffs).</string>
+
+  <array name="levels">
+		<dict>
+			<string name="name">Testing Dungeon</string>
+			<string name="description">0mbarr's Official test map</string>
+			<string name="file">levels/Test1.lvl</string>
+		</dict>
+  </array>
+</dict>

@@ -1,0 +1,142 @@
+<lang>
+<!-- I HATE MYSELF FOR NOT DOING THIS EARLIER-->
+<!-- <string name="item.name.desc">Description</string> -->
+
+	<!-- 1.0 items -->
+	<string name="item.orb-sword.desc">Voosh! Woosh! Swoosh!\n10% to cast a magic arc on primary attack</string>
+	<string name="item.katana1.desc">Old but still works!\n+2 Physical Damage on attack</string>
+	<string name="item.mages-blowgun.desc">Push dont pull!\nShoot a volley of poison darts on Skill use</string>
+	<string name="item.whetstone.desc">Sharpen your blade.\n+5% Attack Damage</string>
+	<string name="item.sage-stim.desc">Your hands jitter a bit...\n+5% attack speed.</string>
+	<string name="item.defender-rapier.desc">it's all reaction!\n15% chance to negate 15 Damage</string>
+	<string name="item.combo-guide.desc">The book is blank...\n+100% Crit Damage while in combo</string>
+	<string name="item.dark-tiara.desc">Fit for a mad queen.\nIncrease Damage with every kill up to 5x Damage</string>
+	<string name="item.maces-mace.desc">Knock em down!\n15% chance to Stun and Disarm +5 Physical Damage on Primary Attack</string>
+	<!-- 1.1 items -->
+	<string name="item.crowbar.desc">Effective prying tool\n+20% Damage to Minibosses\n+20% Experience from Minibosses</string>
+	<string name="item.ornstein-spear.desc">Snitch...\n+7.5% Crit Chance\n15% Armor pierce\nDoes a 28 hit?</string>
+	<string name="item.silv-wand.desc">Now thats a lot of Mana!\n+75 Mana\n+20 Spell power</string>
+	<string name="item.sapphire-spices.desc">Tastes like grape!\nIncreased Health and Mana regen after drinking a Potion for a limited time</string>
+	<string name="item.counterfeit-coin.desc">I know a guy...\n-25% Tax</string>
+	<string name="item.tin-hat.desc">You look stupid...\nImmunity to Confusion</string>
+	<string name="item.tonfas1.desc">The paint is chipping!\n+5 Attack Power</string>
+	<string name="item.slow-pocketwatch.desc">Wanna see me do it again?\nSlows enemies\n+66% Attack Speed </string>
+	<!-- 1.2 items -->
+	<string name="item.lucky-harvester.desc">Become the Reaper'er'er'...\nCrits heal</string>
+	<string name="item.shuriken1.desc">Don't cut yourself\nOccasionally throw 2 Shurikens that inflict Bleed</string>
+	<string name="item.primal-charm.desc">Was there a 7th color?\nRandom offensive effects when taking damage</string>
+	<string name="item.key-mold.desc">Fixing and Re-entering\n50% chance to double Keys</string>
+	<string name="item.thaum-robe.desc">There are weird black stains...\n+25 Resistance</string>
+	<string name="item.thaum-goggles.desc">Sweet spectacles!\n+10% Skill Crit Chance</string>
+	<string name="item.confusing-colonge.desc">You smell... alright?\nConfuse enemies upon taking damage</string>
+	<string name="item.phoenix-feather.desc">Fireproof\nRevive yourself once\nImmunity to Fire\nF</string>
+	<string name="item.magic2-book.desc">What a Lich\nShoot 3 powerful magic missiles  on Skill use</string>
+	<string name="item.parry-book.desc">Be like water...\n10% Evade chance</string>
+	<string name="item.magic-whetstone.desc">Sharpen your Mind.\n+5% Spell and Item Damage</string>
+	<string name="item.bomb-dud.desc">It's a dud\n...\nright..?</string>
+	<!-- 1.3 items -->
+	<string name="item.gem-sword.desc">You can not afford...\n+7 Attack\n+22 Attack Power </string>
+	<string name="item.poison-sword.desc">I should not have done that...\nInflict Poison on enemies\n+10 Attack Power</string>
+	<string name="item.sword-sword.desc">Who made this?\n+1 Attack Power for every item in inventory</string>
+	<string name="item.sword-sword-sword.desc">I can't even...\n+3 Attack Power for every item in inventory</string>
+	<string name="item.moon-sword.desc">Makes you attractive!\nSwords revolve around you doing damage</string>
+	<string name="item.black-sword.desc">Edgy\nInflict Duskflame on enemies\n+3 Magic Damage on Primary Attack</string>
+	<string name="item.crocea-mors1.desc">Don't underestimate me.\n+40 Attack Power</string>
+	<string name="item.crocea-mors2.desc">Doesn't it weigh the same?\n+35 Armor\nYeah...</string>
+	<string name="item.buster-sword.desc">This fit in a chest?\n+100 Attack Power</string>
+	<string name="item.master-sword.desc">Unbreakable, great for chopping trees!\n+15 Magic Damage on Primary Attack\n+50 Attack Power</string>
+	<string name="item.laser-sword.desc">Useless...\n\n\nHuh, theres a button...</string>
+	<string name="item.bone-sword.desc">The skull is a nice touch\n+10 Attack Power\n+10% Damage to Abberations\n+10% Damage to Beasts</string>
+	<string name="item.meta-sword.desc">So fast!\n+3.5% attack speed\n+15 Attack Power</string>
+	<string name="item.pirate-sword.desc">+5 Attack Power\n+10% Gold Gain</string>
+	<string name="item.chain-sword.desc">Vroom Vroom!\n+25% Armor Pierce\n+20 Attack Power</string>
+	<string name="item.knife-sword.desc">I'll use a knife!\n2% chance to spawn Buttered Toast when killing an enemy</string>
+	<string name="item.fish-sword.desc">Mmm... Tuna\n+10% Armor Pierce</string>
+	<string name="item.glass-sword.desc">It's Green...\n+12 Attack Power</string>
+	<string name="item.gun1.desc">Clicky Clicky...</string>
+	<string name="item.gun2.desc">Ping Ping Ping...</string>
+	<string name="item.key-sword.desc">My Friends Are My Power!\n+5 Attack Power\n+0.5 Movement Speed</string>
+	<string name="item.moonlight-sword.desc">Looks like a dragon tail\n+20 Resistance\n+20 Magic Damage on Attack\nRelease a powerful magical arc on attack</string>
+	<string name="item.shovel-sword.desc">For Shovelry!\nEnemies drop Gold\n+15 Attack Power</string>
+	<string name="item.excalibur-sword.desc">Your foes will submit\n+100 Attack Power\nUnleash Holy Flames on your enemies</string>
+	<string name="item.ice-sword.desc">The power is in me. The sword is but the focus...\nNearby enemies freeze\nMake enemies slide</string>
+	<string name="item.zwei-sword.desc">You need two hands\n+15 Attack Power</string>
+	<!-- 1.4 items -->
+	<string name="item.calm-cactus.desc">He's cool!\nStand still for +25% Health Regen</string>
+	<string name="item.katana2.desc">Expertly Crafted!\n+8 Attack Damage on Primary Attack</string>
+	<string name="item.tonfas2.desc">Bonk!\n+25 Attack Power</string>
+	<string name="item.shuriken2.desc">Sick throw!\n15% chance to throw 5 Sturdy Shurikens that inflict heavy bleed</string>
+	<string name="item.adhesive-bandage.desc">Ouchy Ouch!\nImmunity to Bleeding</string>
+	<string name="item.ruby-spices.desc">Tastes, metallic...\nDouble buff duration</string>
+	<string name="item.potion-bandolier.desc">Healer's Necessities\n+2 Potion Charges</string>
+	<string name="item.book-of-enlightenment2.desc">Babies come from where?!\n+30% Experience</string>
+	<string name="item.orianas-cloak.desc">I hate all of you...\nEvery 25 kills grants a buff that increases Crit Chance</string>
+	<string name="item.power-banner.desc">This is my spot now!\n1% chance to drop a banner that heals and reduces damage</string>
+	<string name="item.mythril-boots.desc">The true chad footwear\n25% less Trap Damage</string>
+	<string name="item.bruiser-blood.desc">It's type O- right..?\nEvery 25 kills grants +1 Max Health\nUp to 250 Max</string>
+	<string name="item.fae-flute.desc">Smooth serenades...\nYou and Nearby Allies gain +50% Healing from all sources</string>
+	<string name="item.antidote.desc">Now with new Lemon flavor!\nImmunity to Poison</string>
+	<string name="item.glowing-water.desc">Tastes great in food and drinks!\n+0.3 Mana Regen</string>
+	<string name="item.loaf-bread.desc">If only it could get better...\n+15 Health\nLet's get it</string>
+	<string name="item.holy-water.desc">Boiled the hell out of it!\n+40% Damage to Undead\n+0.5 Health regen</string>
+	<string name="item.boomerang.desc">Where'd it go?...\nThrow a magic boomerang on primary attack</string>
+	<string name="item.gem-pickaxe.desc">Side to side, side side to side\n33% chance to double, triple, and quadruple Ore</string>
+	<!-- 1.4.1 items -->
+	<string name="item.left-sheild-pauldron.desc">I got your left!\nBlocks most projectiles in a 60° arc to your left</string>
+	<string name="item.right-sheild-pauldron.desc">I got your right!\nBlocks most projectiles in a 60° arc to your right</string>
+	<!-- 1.5 items -->
+	<string name="item.megumin-staff.desc">\ce02222"EXPLOSION!"\d\n5% chance to create a Huge explosion after striking an enemy\n2 Second cooldown</string>
+	<string name="item.fiberwire.desc">Just measuring your neck...\nNearby enemies are 10% easier to crit</string>
+	<string name="item.grey-staff.desc">Fry those fools!\n+50 Skill Power</string>
+	<string name="item.wolf-mask.desc">Ugh! I smell like wolf\n+5 Resistance</string>
+	<string name="item.ring-beasts.desc">There is some blood on it.\n+50 Health\n+10 Attack Power</string>
+	<string name="item.ring-eurdite.desc">I feel smart\n+50 Mana\n+1 Mana regen</string>
+	<string name="item.maze-circlet.desc">Fortify!!!\n+10 Skill Power\n+10 Resistance</string>
+	<string name="item.shield-weed.desc">Just keep rolling and rolling...\n+10 Armor\n+0.5 Move speed\n+4 Stamina regen</string>
+	<string name="item.freeze-wand.desc">Smashing!\n+25 Skill Power\nUnleash 1 Ice Bomb that has a 20% chance to freeze enemies when using a skill</string>
+	<string name="item.flame-staff.desc">Spicy Bois Unite!\n+25 Skill Power\nUnleash 1 Fireball that burns enemies when using a skill</string>
+	<string name="item.black-rose.desc">Wilting and blushing\nPrimary attacks have a 20% chance to inflict withering</string>
+	<string name="item.secret-password.desc">Shh... dont tell...</string>
+	<string name="item.focus-sash.desc">It loves you\nPrevent death once every 5 minutes</string>
+	<string name="item.reflection-ring.desc">No U +1\nReflect up to 15 Magical Damage</string>
+	<string name="item.mage-bow.desc">How do you put it away?\n+15 Skill Power</string>
+	<string name="item.ring-of-spells.desc">Spell it out\n+20 Spell power\nRandomly cast spells when using a skill</string>
+	<!-- 1.5.2 items -->
+	<string name="item.black-shirt.desc">It says: "I wanted loot, but all I got was this shirt"\n+5 Armor</string>
+	<string name="item.helm-of-thorns.desc">Try headbutting\n+10 Armor\nDeal 15 Physical Damage when colliding with enemies</string>
+	<string name="item.spiked-gauntlets.desc">Fistbump to the face!\n+10 Health\n+2 Physical Damage on Primary Attack</string>
+	<string name="item.blasphemy.desc">Reeks of Gunpowder\n+14 Attack Power\nFire Sword Beams at full health</string>
+	<string name="item.angel-feather.desc">Death(maybe life?) from above(or below?)\n5% chance to smite enemies on primary attack</string>
+	<!-- 1.5.5 items -->
+	<string name="item.combo-crystal.desc">Belonged to a fallen hero\nReduces combo kill requirement by 1\nIncreases combo time by 1</string>
+	<string name="item.crossbow.desc">Turn it sideways\n+3.5% attack speed\n+15 Attack Power</string>
+	<string name="item.sunlight-sword.desc">I've found my sun\nBuff You and nearby players with Damage Boost and Damage Reduction on skill use for 15 Seconds\n20 Second Cooldown</string>
+	<string name="item.sigil-whirlwind.desc">I'd rather not get hit\nWhen below 50% health block most projectiles</string>
+	<string name="item.sigil-air.desc">You feel lighter\nWhen below 50% health gain +1 Move Speed</string>
+	<string name="item.sigil-void.desc">You feel bad? Just don't!\nWhen Below 50% health gain immunity to most debuffs</string>
+	<string name="item.sigil-haste.desc">Action Surge!\nWhen below 50% health gain +10% Attack Speed</string>
+	<string name="item.sigil-capacity.desc">Emergency backup!\nWhen below 50% health gain +50 Mana and +1 Mana Regen</string>
+	<string name="item.blood-orb.desc">Filled with your life essence\n+15% base health</string>
+	<string name="item.star-caller.desc">Where is the sky?\nStars fall upon stuck enemies dealing 30 Physical Damage</string>
+	<!-- 1.5.9 items -->
+	<string name="item.minor-reflection-ring.desc">No U\nReflect up to 5 Magical Damage</string>
+	<string name="item.greater-reflection-ring.desc">No U +3\nReflect up to 25 Magical Damage</string>
+	<string name="item.scroll-of-breath.desc">Ohhmmm...\nWhen standing still gain +10% Crit Chance</string>
+	<string name="item.spiked-shield.desc">Get outta' my face!\nWhen standing still reflect 5 Physical Damage</string>
+	<string name="item.crescent-rose.desc">It's also a gun!</string>
+	<string name="item.ender-sword.desc">Not the enderest, but ender enough.\n1.5X Damage to Teleporting enemies</string>
+	<string name="item.gold-serpent-ring.desc">Helpsss you find Itemsss\n+4 Luck</string>
+	<string name="item.spider-slayer.desc">Guaranteed to kill spiders!\n2X Damage to Arachnids and sets them on Fire</string>
+	<!-- 1.6 items -->
+	<string name="item.dog-treat.desc">Oh... Alright...\nSummon a wolf familiar that attacks nearby enemies</string>
+	<string name="item.fairy-bottle.desc">Hey! Listen!\nSummon a fairy that heals nearby allies</string>
+	<string name="item.necronomicon.desc">Good reading material\n2% Chance to summon a ghost to attack nearby enemies</string>
+	<string name="item.thunder-ring.desc">You're a little too close!\nStun all nearby enemies when hit and deal 20 Magic Damage\n5 Second Cooldown</string>
+	<string name="item.stone-scroll.desc">I'll call him Rocky...\n5% Chance to petrify Enemies</string>
+	<string name="item.bloodlust-blade.desc">More... I need more BLOOD!\nIncreases Attack Power by current combo\nMAX 30</string>
+	<string name="item.nekonomicon.desc">MEOWsers!\n Summon a ghost cat familiar\nIt does the thing!</string>
+	<string name="item.firebolt-glove.desc">Cantrips are Free\nShoot a firebolt dealing 5 Magic damage with a 5% chance to ignite</string>
+	<string name="item.old-leaf.desc">Already has a bite in it!\nBlock All projectiles\nTake no Physical Damage and 20% Magic Damage while standing still</string>
+	<string name="item..desc"></string>
+	
+</lang>

@@ -1,0 +1,25 @@
+<effect looping="false">
+	<param name="angle" default="0" />
+	<param name="height" default="0" />
+	
+	<sprite looping="true" origin="9 14" texture="./moonlight_projectile.png" material="effects/effects.mats:fire"
+	
+		pos-x="0"
+		pos-y="-height"
+		angle="angle">
+		
+		<frame time="100">7 4 19 28</frame>
+		<frame time="100">7 40 19 28</frame>
+		<frame time="100">7 76 19 28</frame>
+	</sprite>
+	<sprite looping="true" origin="9 14" texture="./moonlight_projectile.png" material="system/default.mats:projectile-player"
+	
+		pos-x="0"
+		pos-y="-height"
+		angle="angle">
+		
+		<frame time="100">7 4 19 28</frame>
+		<frame time="100">7 40 19 28</frame>
+		<frame time="100">7 76 19 28</frame>
+	</sprite>
+</effect>

@@ -1,0 +1,27 @@
+<effect looping="true">
+	<param name="angle" default="0" />
+	<param name="height" default="0" />
+	
+	<sprite looping="true" origin="5 5" texture="./blasphemy.png" material="effects/effects.mats:fire"
+	
+		pos-x="0"
+		pos-y="-height"
+		
+		angle="angle"
+		color-r="1.0*saturate(0.5 + 0.5 * cos(pi * (t*5.0))"
+        color-g="1.0*saturate(0.5 + 0.5 * cos(pi * ((t*5.0) + 0.33)))"
+        color-b="1.0*saturate(0.5 + 0.5 * cos(pi * ((t*5.0) + 0.66))"
+		color-a="1"
+	>	
+		<frame time="2000">0 0 29 10</frame>
+	</sprite>
+	<sprite looping="true" origin="5 5" texture="./blasphemy.png" material="system/default.mats:projectile-player"
+	
+		pos-x="0"
+		pos-y="-height"
+		color-a="0.1"
+		angle="angle">
+		
+		<frame time="100">0 0 29 10</frame>
+	</sprite>
+</effect>

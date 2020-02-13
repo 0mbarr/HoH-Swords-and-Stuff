@@ -1,0 +1,10 @@
+<unit slot="item">
+
+	<scenes>
+		<scene>
+			<sprite origin="2 2" looping="true" texture="./crescentrose.png" material="system/default.mats:default-noxray"> <frame>0 0 4 4</frame> </sprite>
+			<effect src="items/icons/crescent_rose.effect"/>	
+		</scene>
+	</scenes>
+	
+</unit>

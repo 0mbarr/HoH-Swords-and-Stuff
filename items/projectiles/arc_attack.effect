@@ -1,0 +1,23 @@
+<effect looping="false">
+	<param name="angle" default="0" />
+	<param name="height" default="0" />
+	
+	<sprite looping="true" origin="4 12" texture="./arc_attack.png" material="effects/effects.mats:fire"
+	
+		pos-x="0"
+		pos-y="-height"
+		color-a="1"
+		angle="angle">
+		
+		<frame time="100">0 0 9 24</frame>
+	</sprite>
+	<sprite looping="true" origin="4 12" texture="./arc_attack.png" material="system/default.mats:projectile-player"
+	
+		pos-x="0"
+		pos-y="-height"
+		color-a="0.5"
+		angle="angle">
+		
+		<frame time="100">0 0 9 24</frame>
+	</sprite>
+</effect>

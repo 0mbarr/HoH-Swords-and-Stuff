@@ -1,0 +1,415 @@
+<loader order="2">AddSetFile</loader>
+<array>
+
+	<dict> <string name="name">Thaumature Gear</string>
+
+		<array name="items">
+			<string>silv-wand</string>
+			<string>thaum-goggles</string>
+			<string>thaum-robe</string>
+			<string>primal-charm</string>
+		</array>
+		
+		<dict name="1">
+			<string name="desc">-10% Spellcost</string>
+			
+			<dict name="modifier">
+					<string name="class">Modifiers::SpellCost</string>
+					<float name="mana-mul">0.9</float>
+			</dict>
+		</dict>
+		<dict name="2">
+			<string name="desc">-20% Spellcost</string>
+			
+				<dict name="modifier">
+					<string name="class">Modifiers::SpellCost</string>
+					<float name="mana-mul">0.8</float>
+				</dict>
+		</dict>
+		<dict name="3">
+			<string name="desc">-30% Spellcost</string>
+			
+				<dict name="modifier">
+					<string name="class">Modifiers::SpellCost</string>
+					<float name="mana-mul">0.7</float>
+				</dict>
+		</dict>
+		<dict name="4">
+			<string name="desc">-40% Spellcost total</string>
+			
+				<dict name="modifier">
+					<string name="class">Modifiers::SpellCost</string>
+					<float name="mana-mul">0.6</float>
+				</dict>
+		</dict>
+	</dict>
+
+	<dict> <string name="name">Old Ninja Gear</string>
+
+		<array name="items">
+			<string>katana1</string>
+			<string>tonfas1</string>
+			<string>shuriken1</string>
+		</array>
+		
+		<dict name="2">
+		
+			<string name="desc">NINJA VANISH!&#xA;25% Chance to drop a smoke bomb when evading&#xA;+5% Evade Chance</string>
+			
+			<array name="modifiers">
+				<dict>
+					<string name="class">Modifiers::Evade</string>
+					<float name="chance">0.05</float>
+				</dict>
+				<dict>
+					<string name="class">Modifiers::TriggerEffect</string>
+					<string name="trigger">evade</string>
+					<float name="chance">0.25</float>
+					<bool name="target-self">true</bool>
+					<dict name="effect">
+						<string name="class">SpawnUnit</string>
+						<string name="unit">players/thief/smoke_bomb_1.unit</string>
+						<int name="spawn-dist">0</int>
+						<vec2 name="offset">0 0</vec2>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+		<dict name="3">
+			
+			<string name="desc">+12% Evade Chance Total</string>
+			
+			<array name="modifiers">
+				<dict>
+					<string name="class">Modifiers::Evade</string>
+					<float name="chance">0.12</float>
+				</dict>
+				<dict>
+					<string name="class">Modifiers::TriggerEffect</string>
+					<string name="trigger">evade</string>
+					<float name="chance">0.25</float>
+					<bool name="target-self">true</bool>
+					<dict name="effect">
+						<string name="class">SpawnUnit</string>
+						<string name="unit">players/thief/smoke_bomb_1.unit</string>
+						<int name="spawn-dist">0</int>
+						<vec2 name="offset">0 0</vec2>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	
+	<dict> <string name="name">Sharpening Kit</string>
+
+			<array name="items">
+				<string>whetstone</string>
+				<string>magic-whetstone</string>
+			</array>
+			
+			<dict name="2">
+				<string name="desc">+15% damage</string>
+				
+				<dict name="modifier">
+					<string name="class">Modifiers::Damage</string>
+					<float name="mul">1.15</float>
+				</dict>
+			</dict>
+	</dict>
+	
+	<dict> <string name="name">Arc's Ensemble</string>
+
+			<array name="items">
+				<string>crocea-mors1</string>
+				<string>crocea-mors2</string>
+			</array>
+			
+			<dict name="2">
+				<string name="desc">Swing your sword to unleash an arc of damaging wind</string>
+				
+				<dict name="modifier">
+					<string name="class">Modifiers::TriggerEffect</string>
+					<string name="trigger">attack</string>
+					<bool name="target-self">true</bool>
+					<int name="timeout">500</int>
+
+					<array name="effects">
+						<dict name="effect">
+							<string name="class">ShootProjectile</string>
+							<string name="projectile">items/projectiles/arc_attack.unit</string>
+							<int name="dist">10</int>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+	</dict>
+	
+	<dict> <string name="name">Sorcerer's Problemsolver</string>
+
+			<array name="items">
+				<string>gun1</string>
+				<string>gun2</string>
+			</array>
+			
+			<dict name="2">
+				<string name="desc">Bang Bang!&#xA;Bang Bang!&#xA;Bang Bang!&#xA;Bang Bang!</string>
+				
+				<dict name="modifier">
+					<string name="class">Modifiers::TriggerEffect</string>
+					<string name="trigger">attack</string>
+					<bool name="target-self">true</bool>
+					<int name="timeout">1850</int>
+
+					<array name="effects">
+						<dict name="effect">
+							<string name="class">ShootProjectile</string>
+							<string name="projectile">items/projectiles/bullet.unit</string>
+							<int name="dist">5</int>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+	</dict>
+	
+	<dict> <string name="name">New Ninja Gear</string>
+
+		<array name="items">
+			<string>katana2</string>
+			<string>tonfas2</string>
+			<string>shuriken2</string>
+		</array>
+		
+		<dict name="2">
+		
+			<string name="desc">NINJA HIDDEN STRIKE!&#xA;Drop a big smoke bomb&#xA;Drain 5% of attacker's heath when evading attacks&#xA;+10% Evade Chance</string>
+			
+			<array name="modifiers">
+					<dict>
+						<string name="class">Modifiers::Evade</string>
+						<float name="chance">0.10</float>
+					</dict>
+					<dict>
+						<string name="class">Modifiers::TriggerEffect</string>
+						<string name="trigger">evade</string>
+					<array name="effects">
+						<dict>
+							<string name="class">Decimate</string>
+							<float name="amount">0.05</float>
+						</dict>
+						<dict>
+							<string name="class">SpawnUnit</string>
+							<string name="unit">players/thief/smoke_bomb_3.unit</string>
+							<int name="spawn-dist">0</int>
+							<vec2 name="offset">0 0</vec2>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict name="3">
+			
+			<string name="desc">+25% Evade Chance Total</string>
+			
+			<array name="modifiers">
+				<dict>
+					<string name="class">Modifiers::Evade</string>
+					<float name="chance">0.25</float>
+				</dict>
+				<dict>
+					<string name="class">Modifiers::TriggerEffect</string>
+					<string name="trigger">evade</string>
+					<array name="effects">
+						<dict>
+							<string name="class">Decimate</string>
+							<float name="amount">0.05</float>
+						</dict>
+						<dict>
+							<string name="class">SpawnUnit</string>
+							<string name="unit">players/thief/smoke_bomb_3.unit</string>
+							<int name="spawn-dist">0</int>
+							<vec2 name="offset">0 0</vec2>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	
+	<dict> <string name="name">Glowing Bread</string>
+
+			<array name="items">
+				<string>loaf-bread</string>
+				<string>glowing-water</string>
+			</array>
+			
+			<dict name="2">
+				<string name="desc">+1.2 Health Regen</string>
+				
+				<dict name="modifier">
+					<string name="class">Modifiers::Regen</string>
+					<float name="health">1.2</float>
+				</dict>
+			</dict>
+	</dict>
+	
+	<dict> <string name="name">Cast Iron Turtle</string>
+
+			<array name="items">
+				<string>left-sheild-pauldron</string>
+				<string>right-sheild-pauldron</string>
+				<string>frying-pan</string>
+			</array>
+			
+			<dict name="3">
+				<string name="desc">-10% Damage Taken</string>
+				
+				<array name="modifiers">
+					<dict>
+						<string name="class">Modifiers::Armor</string>
+						<float name="dmg-taken-mul">0.9</float>
+					</dict>
+					<dict>
+						<string name="class">Modifiers::BlockProjectile</string>
+						<int name="arc">220</int>
+						<int name="offset">180</int>
+					</dict>
+				</array>
+			</dict>
+	</dict>
+	
+	<dict> <string name="name">Fire and Ice Pt.II</string>
+			
+			<array name="items">
+				<string>freeze-wand</string>
+				<string>flame-staff</string>
+			</array>
+			
+			<dict name="2">
+				<string name="desc">+20 Skill Power</string>
+				
+				<dict name="modifier">
+					<string name="class">Modifiers::Damage</string>
+					<int name="spell-power">20</int>
+				</dict>
+			</dict>
+		</dict>
+
+	<dict> <string name="name">Rings of Blood Magic</string>
+	
+		<array name="items">
+			<string>ring-beasts</string>
+			<string>ring-eurdite</string>
+		</array>
+			
+		<dict name="2">
+			<string name="desc">+25% Health and Mana</string>
+			
+			<dict name="modifier">
+				<string name="class">Modifiers::StatsBase</string>
+				<float name="health">0.25</float>
+				<float name="mana">0.25</float>
+			</dict>
+		</dict>
+	</dict>
+	
+	<dict> <string name="name">Armor of Spikes</string>
+		
+		<array name="items">
+			<string>mail-of-thorns</string>
+			<string>thorned-gauntlets</string>
+			<string>spiked-boots</string>
+			<string>helm-of-thorns</string>
+		</array>
+		
+		<dict name="2">
+			<string name="desc">+5% Item Crit Chance</string>
+			
+			<dict name="modifier">
+				<string name="class">Modifiers::CriticalHit</string>
+				<float name="spell-chance">0.05</float>
+			</dict>
+		</dict>
+		
+		<dict name="4">
+			<string name="desc">50 Physical Damage when colliding with enemies</string>
+			
+			<array name="modifiers">
+				<dict>
+					<string name="class">Modifiers::CriticalHit</string>
+					<float name="spell-chance">0.05</float>
+				</dict>
+				<dict>
+					<string name="class">Modifiers::TriggerEffect</string>
+					<string name="trigger">collide</string>
+					<dict name="effect">
+						<string name="class">Damage</string>
+						<int name="physical">50</int>
+					</dict>	
+				</dict>
+			</array>
+		</dict>
+	</dict>
+
+	<dict> <string name="name">Blood Magic Arsenal</string>
+	
+		<array name="items">
+			<string>sigil-whirlwind</string>
+			<string>sigil-air</string>
+			<string>sigil-void</string>
+			<string>sigil-haste</string>
+			<string>sigil-capacity</string>
+			<string>blood-orb</string>
+		</array>
+	
+		<dict name="2">
+			<string name="desc">-5% Damage Taken when under 25% Health</string>
+			
+			<array name="modifiers">
+				<dict>
+					<string name="class">Modifiers::HealthFilter</string>
+					<float name="below">0.25</float>
+					<dict name="modifier">
+						<string name="class">Modifiers::Armor</string>
+						<float name="dmg-taken-mul">0.95</float>
+					</dict>
+				</dict>
+			</array>
+			
+		</dict>
+		
+		<dict name="4">
+			<string name="desc">-10% Damage Taken when under 30% Health</string>
+			
+			<array name="modifiers">
+				<dict>
+					<string name="class">Modifiers::HealthFilter</string>
+					<float name="below">0.30</float>
+					<dict name="modifier">
+						<string name="class">Modifiers::Armor</string>
+						<float name="dmg-taken-mul">0.9</float>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+		
+		<dict name="6">
+			<string name="desc">Every 25 Kills increase Max Health(+1000 Max)&#xA;-15% Damage Taken when under 50% Health</string>
+			
+			<array name="modifiers">
+				<dict>
+					<string name="class">Modifiers::HealthPerKill</string>
+					<int name="kills">25</int>
+					<int name="health-cap">1000</int>
+				</dict>
+				<dict>
+					<string name="class">Modifiers::HealthFilter</string>
+					<float name="below">0.5</float>
+					<dict name="modifier">
+						<string name="class">Modifiers::Armor</string>
+						<float name="dmg-taken-mul">0.85</float>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</array>

@@ -1,0 +1,27 @@
+<unit layer="-1">
+	<behavior class="DangerAreaBehavior">
+		<int name="freq">250</int>
+		<int name="ttl">2000</int>
+		
+		<int name="actor-filter">2</int>
+		<float name="self-dmg">1</float>
+		<float name="team-dmg">1</float>
+		<float name="enemy-dmg">0</float>
+		
+		<array name="effects">
+			<dict>
+				<string name="class">ApplyBuff</string>
+				<string name="buff">items/sas_buffs.sval:sun-oath</string>
+			</dict>
+		</array>
+	</behavior>
+
+	<scenes default="def">
+		<scene name="def" trigger-snd="event:/ui/game-win">
+			<collision static="false">
+				<circle sensor="true" offset="0 0" radius="24" />
+			</collision>
+			<effect src="items/units/sun_oath.effect"/>	
+		</scene>
+	</scenes>
+</unit>

@@ -1,0 +1,34 @@
+<unit netsync="none">
+	<behavior class="Projectile">
+		<string name="anim">idle</string>
+		<float name="speed">10</float>
+		<int name="ttl">2000</int>
+		
+		<array name="effects">
+			<dict>
+				<string name="class">Damage</string>
+				<int name="magical">8</int>
+			</dict>
+			<dict>
+				<string name="class">ChanceApplyBuff</string>
+				<string name="buff">items/buffs.sval:flame-tounge</string>
+				<float name="chance">0.05</float>
+			</dict>
+		</array>
+		
+		<dict name="effect-params">
+			<float name="height">4</float>
+		</dict>
+	</behavior>
+
+	<scenes>
+		<scene name="idle">
+			<effect src="items/projectiles/firebolt.effect" />
+		
+			<collision static="false">
+				<circle offset="0 0" radius="2" projectile="true" />
+			</collision>
+		</scene>
+	</scenes>
+</unit>
+

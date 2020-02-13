@@ -1,0 +1,34 @@
+<unit slot="item">
+	<behavior class="Pickup">
+		<bool name="bounce">false</bool>
+		<string name="sound">event:/item/health</string>
+		<bool name="global">true</bool>
+		<array name="effects">
+			<dict>
+				<string name="class">Heal</string>
+				<int name="heal">75</int>
+				<bool name="pickup">true</bool>
+			</dict>
+			<dict>
+				<string name="class">GiveMana</string>
+				<int name="mana">50</int>
+				<bool name="pickup">false</bool>
+			</dict>
+		</array>
+	</behavior>
+
+	<scenes>
+		<scene>
+			<sprite origin="4.5 5" layer="-1" texture="./toast_buttered.png" material="system/default.mats:shadow">
+				<frame>12 0 12 13</frame>
+			</sprite>
+			<minimap_sprite layer="10" origin="6 4" texture="gui/minimap.png" frame="49 20 9 9" />
+			<collision static="true">
+				<circle sensor="true" offset="0 -2" radius="5" />
+			</collision>
+			<sprite origin="6 6" looping="true" texture="./toast_buttered.png" material="items/items.mats:food">
+				<frame time="200">0 0 12 13</frame>
+			</sprite>
+		</scene>
+	</scenes>
+</unit>

@@ -1,0 +1,40 @@
+<unit netsync="none">
+	<behavior class="RayProjectile">
+		<string name="anim">idle</string>
+		<float name="speed">15</float>
+		<int name="penetration">3</int>
+		<int name="ttl">1000</int>
+		<bool name="blockable">false</bool>
+		
+		<string name="shoot-snd">event:/player/ranger/bomb_explode</string>
+		<string name="hit-snd">event:/misc/trap_arrow_hit</string>
+		
+		<array name="effects">
+		<dict>
+			<string name="class">Damage</string>
+			<int name="physical">90</int>
+			<float name="armor-mul">0.5</float>
+		</dict>
+		<dict>
+			<string name="class">ApplyBuff</string>
+			<string name="buff">items/buffs.sval:duelists-edge</string>
+		</dict>
+		<dict>
+			<string name="class">ApplyBuff</string>
+			<string name="buff">items/buffs.sval:shieldbreaker</string>
+		</dict>
+		</array>
+
+		<dict name="effect-params">
+			<float name="height">4</float>
+		</dict>
+	</behavior>
+	<scenes>
+		<scene name="idle">
+			<effect src="./bullet.effect" />
+			<collision static="false">
+				<circle projectile="true" radius="2" />
+			</collision>
+		</scene>
+	</scenes>
+</unit>

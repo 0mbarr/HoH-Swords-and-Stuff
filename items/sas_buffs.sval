@@ -1,0 +1,151 @@
+<svals>
+	<dict name="regen-both">
+		<int name="duration">15000</int> <!-- 15 secondes -->
+		<bool name="debuff">false</bool>
+		
+		<dict name="tick">
+			<int name="freq">1000</int>
+			<array name="effects">
+			<!-- Healing -->
+				<dict>
+					<string name="class">Decimate</string>
+					<float name="amount-max">-0.02</float>
+				</dict>
+			<!-- Mana Gen-->
+				<dict>
+					<string name="class">Decimate</string>
+					<float name="mana">-0.02</float>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	
+	<!--<dict name="pheonix-up">
+		<array name="effects">
+			<dict>
+			<string name="class">Modifiers::HealthFilter</string>
+			<float name="below">0.1</float>
+			<array name="modifiers"></array>
+			</dict>
+		</array>
+	</dict> -->
+	
+	<dict name="duskburn">
+		<string name="tag">burning</string>
+		<int name="duration">1000</int>
+		<bool name="debuff">true</bool>
+		
+		<string name="icon">items/icons/duskburn.unit</string>
+		
+		<dict name="tick">
+			<int name="freq">200</int>
+			<dict name="effect">
+				<string name="class">Damage</string>
+				<int name="magical">4</int>
+				<bool name="can-kill">true</bool>
+			</dict>
+		</dict>
+	</dict>
+	
+	<dict name="holyburn">
+		<int name="duration">8000</int>
+		<bool name="debuff">true</bool>
+		
+		<string name="icon">items/icons/holyburn.unit</string>
+		
+		<float name="speed-mul">0.15</float>
+		
+		<dict name="tick">
+			<int name="freq">70</int>
+			<dict name="effect">
+				<string name="class">Damage</string>
+				<int name="magical">3</int>
+				<bool name="can-kill">true</bool>
+				<bool name="true-strike">true</bool>
+			</dict>
+		</dict>
+	</dict>
+	
+	<dict name="goodberry">
+		<string name="tag">healing</string>
+		<int name="duration">1000</int>
+		
+		<float name="scale">1.5</float>
+	</dict>
+	
+	<dict name="fiber-wire">
+		<int name="duration">2500</int>
+		<bool name="debuff">true</bool>
+		<float name="receive-crit-chance">0.1</float>
+		<float name="speed-mul">0.9</float>
+	</dict>
+	
+	<dict name="black-wither">
+		<int name="duration">2500</int>
+		<bool name="debuff">true</bool>
+		
+		<string name="icon">items/icons/wither.unit</string>
+		
+		<float name="dmg-taken-mul">1.5</float>
+		<float name="speed-mul">0.8</float>
+	</dict>
+	
+	<dict name="freeze-wand">
+		<array name="tags">
+			<string>freezing</string>
+			<string>stun</string>
+		</array>
+		
+		<int name="duration">1500</int>
+		<bool name="debuff">true</bool>
+		
+		<string name="icon">doodads/special/icons/freeze.unit</string>
+		<float name="speed-mul">0</float>
+		<bool name="disarm">true</bool>
+		<bool name="shatterable">true</bool>
+		
+		<array name="colors">
+			<vec4>0 0 0.025 1</vec4>
+			<vec4>0 0 1 1</vec4>
+			<vec4>0.9 0.9 1 1</vec4>
+		</array>
+	</dict>
+	
+	<dict name="flame-staff">
+		<string name="tag">burning</string>
+		<int name="duration">2500</int>
+		<bool name="debuff">true</bool>
+		
+		<string name="icon">doodads/special/icons/burn.unit</string>
+		
+		<dict name="tick">
+			<int name="freq">500</int>
+			<dict name="effect">
+				<string name="class">Damage</string>
+				<int name="magical">4</int>
+			</dict>
+		</dict>
+	</dict>
+	
+	<dict name="sun-oath">
+		<int name="duration">15000</int>
+		<float name="dmg-taken-mul">0.9</float>
+		<float name="dmg-mul">1.115</float>
+		
+		<string name="icon">items/icons/sun_oath.unit</string>
+	</dict>
+
+	<dict name="focus-sash">
+		<int name="duration">3000</int>
+		<float name="dmg-taken-mul">0</float>
+	</dict>
+	
+	<dict name="oriana-cloak">
+		<int name="duration">2000</int>
+		
+		<dict name="modifier">
+			<string name="class">Modifiers::CriticalHit</string>
+			<float name="chance">0.25</float>
+		</dict>
+	</dict>
+</svals>

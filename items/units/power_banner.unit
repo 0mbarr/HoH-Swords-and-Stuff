@@ -1,0 +1,34 @@
+<unit layer="-1">
+	<behavior class="DangerAreaBehavior">
+		<int name="freq">250</int>
+		<int name="ttl">30000</int>
+		
+		<int name="actor-filter">2</int>
+		<float name="self-dmg">1</float>
+		<float name="team-dmg">1</float>
+		<float name="enemy-dmg">0</float>
+		
+		<array name="effects">
+			<dict>
+				<string name="class">ApplyBuff</string>
+				<string name="buff">items/buffs.sval:healing-area</string>
+			</dict>
+			<dict>
+				<string name="class">ApplyBuff</string>
+				<string name="buff">actors/buffs.sval:protection</string>
+			</dict>
+		</array>
+	</behavior>
+
+	<scenes default="def">
+		<scene name="def" trigger-snd="event:/misc/button_hatch2">
+			<sprite origin="5 16" looping="true" texture=".units/power_banner.png" material="system/default.mats:actor">
+				<frame time="150">0 36 10 18</frame>
+			</sprite>
+			<collision static="false">
+				<circle sensor="true" offset="0 0" radius="40" />
+			</collision>
+			<effect src="items/units/power_banner.effect"/>	
+		</scene>
+	</scenes>
+</unit>

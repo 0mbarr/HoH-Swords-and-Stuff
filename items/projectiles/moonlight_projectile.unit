@@ -1,0 +1,31 @@
+<unit netsync="none">
+	<behavior class="Projectile">
+		<string name="anim">idle</string>
+		<float name="speed">4.7</float>
+		<int name="ttl">4000</int>
+		
+		<array name="effects">
+			<dict>
+				<string name="class">Damage</string>
+				<int name="magical">130</int>
+				<float name="resisence-mul">0.5</float>
+			</dict>
+		</array>
+		
+		<dict name="effect-params">
+			<float name="height">4</float>
+		</dict>
+	</behavior>
+
+	<scenes>
+		<scene name="idle">
+			<effect src="./moonlight_projectile.effect" />
+			<collision static="false">
+				<circle offset="0 0" radius="10" projectile="true" />
+			</collision>
+			<effect src="items/projectiles/moonlight_projectile_trail.effect" />
+		</scene>
+
+	</scenes>
+</unit>
+

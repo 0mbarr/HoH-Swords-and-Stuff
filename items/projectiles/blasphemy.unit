@@ -1,0 +1,29 @@
+<unit>
+	<behavior class="Projectile">
+		<string name="anim">idle</string>
+		<float name="speed">5.5</float>
+		<int name="ttl">3000</int>
+		
+		<array name="effects">
+			<dict>
+				<string name="class">Damage</string>
+				<int name="magical">15</int>
+			</dict>
+		</array>
+		
+		<dict name="effect-params">
+			<float name="height">4</float>
+		</dict>
+	</behavior>
+
+	<scenes>
+		<scene name="idle">
+			<effect src="./blasphemy.effect" />
+			<collision static="false">
+				<circle offset="0 0" radius="5" projectile="true" />
+			</collision>
+		</scene>
+
+	</scenes>
+</unit>
+

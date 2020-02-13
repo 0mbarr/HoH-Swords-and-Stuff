@@ -1,0 +1,71 @@
+<effect looping="true" layer="-1" bounds="50 50">
+
+	<param name="radius" default="54" />
+	<param name="ttl" default="1000" />
+	<!-- symbols -->
+
+	<!-- rotating rings-->
+	<sprite origin="27 27" looping="true" texture="./sun_oath.png" material="system/default.mats:glow-both-bright"
+		angle="t*pi*2"
+		
+        color-r="0.5"
+        color-g="0.5"
+        color-b="0.5"
+	>
+        <frame time="1000">0 0 54 54</frame>
+	</sprite>
+	<sprite origin="14 14" looping="true" texture="./sun_oath.png" material="system/default.mats:glow-both-bright"
+		angle="t*pi*-2"
+		
+		color-r="0.5"
+        color-g="0.5"
+        color-b="0.5"
+	>
+        <frame time="1000">54 0 28 28</frame>
+	</sprite>
+	<sprite origin="5 -20" looping="true" texture="./sun_oath.png" material="system/default.mats:glow-both-bright"
+		angle="(t+l)*pi*-4"
+		
+		scale-x="0.75"
+		scale-y="0.75"
+		
+		color-r="0.5"
+        color-g="0.5"
+        color-b="0.5"
+	>
+        <frame time="3000">95 0 9 16</frame>
+	</sprite>
+	<sprite origin="7 30" looping="true" texture="./sun_oath.png" material="system/default.mats:glow-both-bright"
+		angle="(t+l)*pi*-4"
+		
+		scale-x="0.75"
+		scale-y="0.75"
+		
+        color-r="0.5"
+        color-g="0.5"
+        color-b="0.5"
+	>
+        <frame time="3000">82 0 13 13</frame>
+	</sprite>
+	<light pos-x="0" pos-y="0">
+		<sprite texture="system/light_L.png">
+			<frame time="500">0 0 128 128</frame>
+		</sprite>
+
+		<looping value="true" />
+
+		<cast-shadows value="false" />
+
+		<shadow-cast-pos-x value="0" />
+		<shadow-cast-pos-y value="0" />
+
+		<shadow-cast-pos-jitter value="0 0 0 0" />
+
+		<size value="max(t*10, radius * 3 + 10)" />
+
+		<color-r value="0.5" />
+		<color-g value="2.5 * saturate(cos(t*pi*16+0.5))" />
+		<color-b value="1 * saturate(sin(t*pi*16))" />
+		<color-a value="0"/>
+	</light>
+</effect>

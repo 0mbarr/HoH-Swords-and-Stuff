@@ -1,0 +1,30 @@
+<unit netsync="none">
+	<behavior class="Projectile">
+		<string name="anim">idle</string>
+		<float name="speed">7</float>
+		<int name="ttl">1500</int>
+		
+		<array name="effects">
+			<dict>
+				<string name="class">Damage</string>
+				<int name="physical">55</int>
+			</dict>
+		</array>
+		
+		<dict name="effect-params">
+			<float name="height">4</float>
+		</dict>
+	</behavior>
+
+	<scenes>
+		<scene name="idle">
+			<effect src="./arc_attack.effect" />
+			<collision static="false">
+				<circle offset="0 0" radius="8" projectile="true" />
+			</collision>
+			<effect src="items/projectiles/arc_attack_trail.effect" />
+		</scene>
+
+	</scenes>
+</unit>
+
