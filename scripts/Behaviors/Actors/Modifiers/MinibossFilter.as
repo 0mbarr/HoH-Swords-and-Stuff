@@ -16,7 +16,14 @@ namespace Modifiers
         }
 
         bool Filter(PlayerBase@ player, Actor@ enemy) override
-        {
+        {   
+
+            /*if (cast<Miniboss>(enemy) !is null){
+            PrintError("Is Miniboss: True");
+            }
+            else{
+            PrintError("Is Miniboss: False");
+            }*/
             return cast<Miniboss>(enemy) !is null;
         }
     }

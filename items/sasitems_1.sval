@@ -7,10 +7,13 @@
 		<string name="quality">rare</string>
 		<int name="cost">5000</int>
 
-    <array name="icon">
-      <string>items/sasitems.png</string>
-      <int>100</int><vec4>0 0 12 12</vec4>
-    </array>
+		<bool name="has-blueprints">true</bool>
+		<bool name="can-attune">false</bool>
+
+   	 	<array name="icon">
+      		<string>items/sasitems.png</string>
+      		<int>100</int><vec4>0 0 12 12</vec4>
+   		</array>
 
 		<dict name="modifier">
 			<string name="class">Modifiers::TriggerEffect</string>
@@ -28,7 +31,7 @@
 				</dict>
 			</array>
 		</dict> 
-  </dict>
+ 	</dict>
 	
 	<dict name="katana1">
 		<string name="name">Old Katana</string>
@@ -55,10 +58,12 @@
 		<string name="quality">uncommon</string>
 		<int name="cost">750</int>
 
-    <array name="icon">
-      <string>items/sasitems.png</string>
-      <int>100</int><vec4>24 0 12 12</vec4>
-    </array>
+		<bool name="has-blueprints">true</bool>
+
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>24 0 12 12</vec4>
+		</array>
 
 		<dict name="modifier">
 			<string name="class">Modifiers::TriggerEffect</string>
@@ -88,6 +93,8 @@
 		<string name="quality">uncommon</string>
 		<int name="cost">800</int>
 		
+		<bool name="has-blueprints">true</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>36 0 12 12</vec4>
@@ -225,7 +232,8 @@
 		<int name="cost">800</int>
 		
 		<bool name="has-blueprints">true</bool>
-		
+		<bool name="can-attune">false</bool>
+
 		<array name="icon">
 		  <string>items/sasitems.png</string>
 		  <int>100</int><vec4>0 12 12 12</vec4>
@@ -233,17 +241,11 @@
 		
 		<array name="modifiers">
 			<dict>
-			<string name="class">Modifiers::MinibossFilter</string>
+				<string name="class">Modifiers::EnemyHealthFilter</string>
+				<float name="above">0.8</float>
 				<dict nam="modifier">
 					<string name="class">Modifiers::Damage</string>
-					<float name="mul">1.2</float>
-				</dict>
-			</dict>
-			<dict>
-				<string name="class">Modifiers::MinibossFilter</string>
-				<dict name="modifier">
-					<string name="class">Modifiers::Experience</string>
-					<float name="mul">1.2</float>
+					<float name="mul">2</float>
 				</dict>
 			</dict>
 		</array>
@@ -279,8 +281,6 @@
 		<string name="desc">.item.silv-wand.desc</string>
 		<string name="quality">epic</string>
 		<int name="cost">19500</int>
-		
-		<bool name="has-blueprints">false</bool>
 		
 		<array name="icon">
 			<string>items/sasitems.png</string>
@@ -328,16 +328,21 @@
 		<string name="desc">.item.counterfeit-coin.desc</string>
 		<string name="quality">uncommon</string>
 		<int name="cost">499</int>
+		<bool name="buy-in-town">false</bool>
 		
-	<array name="icon">
-      <string>items/sasitems.png</string>
-      <int>100</int><vec4>48 12 12 12</vec4>
-    </array>
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>48 12 12 12</vec4>
+		</array>
 	
-    <dict name="modifier">
-        <string name="class">Modifiers::Tax</string>
-        <int name="midpoint">12500</int>
-    </dict>
+		<dict name="modifier">
+			<string name="class">Modifiers::Tax</string>
+			<float name="midpoint-mul">1.25</float>
+		</dict>
+		<dict name="modifier">
+			<string name="class">Modifiers::ShopCost</string>
+			<float name="mul">0.75</float>
+		</dict>
    </dict>
 	
 	<dict name="tin-hat">
@@ -347,6 +352,7 @@
 		<int name="cost">825</int>
 		
 		<bool name="has-blueprints">true</bool>
+		<bool name="can-attune">false</bool>
 		
 		<array name="icon">
 		  <string>items/sasitems.png</string>
@@ -413,6 +419,8 @@
 		<string name="quality">uncommon</string>
 		<int name="cost">1000</int>
 
+		<bool name="has-blueprints">true</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>108 0 12 12</vec4>
@@ -436,18 +444,19 @@
 		<int name="cost">300</int>
 
 		<bool name="has-blueprints">true</bool>
+		<bool name="can-attune">false</bool>
 
-    <array name="icon">
-      <string>items/sasitems.png</string>
-      <int>100</int><vec4>60 12 12 12</vec4>
-    </array>
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>60 12 12 12</vec4>
+		</array>
 
-    <dict name="modifier">
-      <string name="class">Modifiers::TriggerEffect</string>
-			<string name="trigger">attack</string>
-			<float name="chance">1.0</float>
-			<bool name="trigger-self">true</bool>
-			<int name="timeout">1200</int>
+    	<dict name="modifier">
+     		<string name="class">Modifiers::TriggerEffect</string>
+				<string name="trigger">attack</string>
+				<float name="chance">1.0</float>
+				<bool name="trigger-self">true</bool>
+				<int name="timeout">1200</int>
 
 			<dict name="effect">
 				<string name="snd">event:/player/thief/fan_of_knives</string>
@@ -462,15 +471,15 @@
 	</dict>
 	
 	<dict name="primal-charm">
-	<string name="name">Primal Charm</string>
+		<string name="name">Primal Charm</string>
 		<string name="desc">.item.primal-charm.desc</string>
 		<string name="quality">epic</string>
 		<int name="cost">20000</int>
 
-    <array name="icon">
-      <string>items/sasitems.png</string>
-      <int>100</int><vec4>108 12 12 12</vec4>
-    </array>
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>108 12 12 12</vec4>
+		</array>
 
 		<array name="modifiers">
 			<dict>
@@ -575,15 +584,15 @@
 	</dict>
 	
 	<dict name="thaum-robe">
-	<string name="name">Thamaturge Robes</string>
+		<string name="name">Thamaturge Robes</string>
 		<string name="desc">.item.thaum-robe.desc</string>
 		<string name="quality">uncommon</string>
 		<int name="cost">1200</int>
 
-    <array name="icon">
-      <string>items/sasitems.png</string>
-      <int>100</int><vec4>48 24 12 12</vec4>
-    </array>
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>48 24 12 12</vec4>
+		</array>
 
 		<dict name="modifier">
 			<string name="class">Modifiers::Armor</string>
@@ -657,7 +666,7 @@
 	</dict>-->
 	
 	<dict name="magic2-book">
-	<string name="name">Tome of Improved Magic Missile</string>
+		<string name="name">Tome of Improved Magic Missile</string>
 		<string name="desc">.item.magic2-book.desc</string>
 		<string name="quality">rare</string>
 		<int name="cost">1250</int>
@@ -667,27 +676,27 @@
 			<int>100</int><vec4>84 24 12 12</vec4>
 		</array>
 	
-	<dict name="modifier">
-				<string name="class">Modifiers::TriggerEffect</string>
-				<string name="trigger">castspell</string>
-				<bool name="target-self">true</bool>
-				<float name="chance">1</float>
-				<int name="timeout">3000</int>
+		<dict name="modifier">
+			<string name="class">Modifiers::TriggerEffect</string>
+			<string name="trigger">castspell</string>
+			<bool name="target-self">true</bool>
+			<float name="chance">1</float>
+			<int name="timeout">3000</int>
 
-				<array name="effects">
-					<dict>
-						<string name="class">ShootProjectileFan</string>
-						<string name="projectile">items/projectiles/magic_missile2.unit</string>
-						<int name="dist">4</int>
-						<int name="projectiles">3</int>
-						<int name="spread">50</int>
-					</dict>
-					<dict>
-						<string name="class">PlaySound</string>
-						<string name="sound">event:/item/magic_missile_shoot</string>
-					</dict>
-				</array>
-			</dict>
+			<array name="effects">
+				<dict>
+					<string name="class">ShootProjectileFan</string>
+					<string name="projectile">items/projectiles/magic_missile2.unit</string>
+					<int name="dist">4</int>
+					<int name="projectiles">3</int>
+					<int name="spread">50</int>
+				</dict>
+				<dict>
+					<string name="class">PlaySound</string>
+					<string name="sound">event:/item/magic_missile_shoot</string>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 	
 	<dict name="parry-book">
@@ -729,7 +738,7 @@
 	</dict>	
 	
 	<dict name="bomb-dud">
-	<string name="name">Dusty Bomb</string>
+		<string name="name">Dusty Bomb</string>
 		<string name="desc">.item.bomb-dud.desc</string>
 		<string name="quality">common</string>
 		<int name="cost">850</int>
@@ -843,9 +852,12 @@
 		<string name="quality">epic</string>
 		<int name="cost">20000</int>
 		
-		<bool name="has-blueprints">true</bool>
-		
 		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>96 204 12 12</vec4>
+		</array>
+
+		<array name="icon-scene">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>48 216 42 17</vec4>
 		</array>
@@ -863,7 +875,7 @@
 	</dict>	
 	
 	<!--<dict name="moon-sword">
-	<string name="name">Moon Sword</string>
+		<string name="name">Moon Sword</string>
 		<string name="desc">.item.moon-sword.desc</string>
 		<string name="quality">uncommon</string>
 		<int name="cost">1200</int>
@@ -960,9 +972,14 @@
 		
 		<array name="icon">
 			<string>items/sasitems.png</string>
-			<int>100</int><vec4>0 220 48 11</vec4>
+			<int>100</int><vec4>108 204 12 12</vec4>
 		</array>
 		
+		<array name="icon-scene">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>0 220 48 11</vec4>
+		</array>
+
 		<dict name="modifier">
 			<string name="class">Modifiers::Damage</string>
 			<int name="attack-power">100</int>
@@ -1060,6 +1077,8 @@
 		<string name="quality">uncommon</string>
 		<int name="cost">900</int>
 		
+		<bool name="has-blueprints">true</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>12 48 12 12</vec4>
@@ -1204,6 +1223,22 @@
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>84 48 12 12</vec4>
 		</array>
+		
+		<array name="modifiers">
+			<dict name="modifier">
+				<string name="class">Modifiers::CriticalHit</string>
+				<float name="spell-chance">0.05</float>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::TriggerEffect</string>
+				<string name="trigger">kill</string>
+				<dict name="effect">
+					<string name="class">SetFlag</string>
+					<string name="flag">has_gun</string>
+					<bool name="value">true</bool>
+				</dict>
+			</dict>
+		</array>
 	</dict>
 	
 	<dict name="gun2">
@@ -1211,11 +1246,19 @@
 		<string name="desc">.item.gun2.desc</string>
 		<string name="quality">common</string>
 		<int name="cost">500</int>
+		<string name="required-flag">has_gun</string>
 		
+		<bool name="has-blueprints">true</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>96 48 12 12</vec4>
 		</array>
+		
+		<dict name="modifier">
+			<string name="class">Modifiers::Damage</string>
+			<int name="spell-power">5</int>
+		</dict>
 	</dict>
 	
 	<dict name="key-sword">
@@ -1223,6 +1266,8 @@
 		<string name="desc">.item.key-sword.desc</string>
 		<string name="quality">uncommon</string>
 		<int name="cost">450</int>
+
+		<bool name="has-blueprints">true</bool>
 		
 		<array name="icon">
 			<string>items/sasitems.png</string>
@@ -1265,10 +1310,8 @@
 			<string name="class">Modifiers::TriggerEffect</string>
 				<string name="trigger">attack</string>
 				<float name="chance">1</float>
-				
 				<bool name="target-self">true</bool>
 				<int name="timeout">2000</int>
-				
 				<dict name="effect">
 					<string name="class">ShootProjectile</string>
 					<string name="projectile">items/projectiles/moonlight_projectile.unit</string>
@@ -1284,6 +1327,9 @@
 		<string name="quality">uncommon</string>
 		<int name="cost">1250</int>
 		
+		<bool name="has-blueprints">true</bool>
+		<bool name="can-attune">false</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>12 60 12 12</vec4>
@@ -1393,7 +1439,6 @@
 		<string name="quality">uncommon</string>
 		<int name="cost">1250</int>
 
-
 		<array name="icon">
 		  <string>items/sasitems.png</string>
 		  <int>100</int><vec4>60 60 12 12</vec4>
@@ -1458,6 +1503,7 @@
 		<int name="cost">1300</int>
 
 		<bool name="has-blueprints">true</bool>
+		<bool name="can-attune">false</bool>
 
 		<array name="icon">
 		  <string>items/sasitems.png</string>
@@ -1488,6 +1534,9 @@
 		<string name="quality">uncommon</string>
 		<int name="cost">825</int>
 		
+		<bool name="has-blueprints">true</bool>
+		<bool name="can-attune">false</bool>
+
 		<array name="icon">
 		  <string>items/sasitems.png</string>
 		  <int>100</int><vec4>108 60 12 12</vec4>
@@ -1524,6 +1573,8 @@
 		<string name="quality">rare</string>
 		<int name="cost">3250</int>
 		
+		<bool name="has-blueprints">true</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>12 72 12 12</vec4>
@@ -1561,7 +1612,10 @@
 		<string name="desc">.item.orianas-cloak.desc</string>
 		<string name="quality">rare</string>
 		<int name="cost">4500</int>
-		
+
+		<bool name="has-blueprints">true</bool>
+		<bool name="can-attune">false</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>36 72 12 12</vec4>
@@ -1574,10 +1628,11 @@
 				<int name="counter">25</int>
 				<float name="chance">1</float>
 				<bool name="target-self">true</bool>
+				<int name="timeout">10000</int>
 				
 				<dict name="effect">
 					<string name="class">ApplyBuff</string>
-					<string name="buff">items/sas_buffs.sval:orianas-cloak</string>
+					<string name="buff">items/sas_buffs.sval:oriana-cloak</string>
 				</dict>
 			</dict>
 		</array>
@@ -1589,6 +1644,8 @@
 		<string name="quality">rare</string>
 		<int name="cost">4250</int>
 		
+		<bool name="can-attune">false</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>48 72 12 12</vec4>
@@ -1642,6 +1699,8 @@
 		<string name="quality">uncommon</string>
 		<int name="cost">1500</int>
 		
+		<bool name="can-attune">false</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>72 72 12 12</vec4>
@@ -1655,11 +1714,13 @@
 	</dict>
 	
 	<dict name="fae-flute">
-	<string name="name">Fae Flute</string>
+		<string name="name">Fae Flute</string>
 		<string name="desc">.item.fae-flute.desc</string>
 		<string name="quality">uncommon</string>
 		<int name="cost">1000</int>
-		
+
+		<bool name="can-attune">false</bool>
+
 		<array name="icon">
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>84 72 12 12</vec4>
@@ -1668,14 +1729,14 @@
 		<array name="modifiers">
 			<dict>
 				<string name="class">Modifiers::HealthGain</string>
-				<float name="scale">1.5</float>
+				<float name="scale">1.25</float>
 			</dict>
 			<dict>
 				<string name="class">Modifiers::Aura</string>
 				<int name="range">250</int>
-				<int name="freq">50</int>
+				<int name="freq">100</int>
 				<bool name="friendly">true</bool>
-				<string name="buff">items/sas_buffs.sval:goodberry</string>
+				<string name="buff">items/sas_buffs.sval:heal-song</string>
 			</dict>
 		</array>
 	</dict>
@@ -1768,10 +1829,10 @@
 		
 		<bool name="has-blueprints">true</bool>
 
-    <array name="icon">
-      <string>items/sasitems.png</string>
-      <int>100</int><vec4>24 84 12 12</vec4>
-    </array>
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>24 84 12 12</vec4>
+		</array>
 
 		<dict name="modifier">
 			<string name="class">Modifiers::TriggerEffect</string>

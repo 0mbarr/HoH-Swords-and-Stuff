@@ -7,12 +7,12 @@
 		<array name="effects">
 			<dict>
 				<string name="class">Damage</string>
-				<int name="magical">8</int>
+				<int name="magical">10</int>
 			</dict>
 			<dict>
 				<string name="class">ChanceApplyBuff</string>
-				<string name="buff">items/buffs.sval:flame-tounge</string>
-				<float name="chance">0.05</float>
+				<float name="chance">0.2</float>
+				<string name="buff">items/sas_buffs.sval:flame-staff</string>
 			</dict>
 		</array>
 		
@@ -26,7 +26,7 @@
 			<effect src="items/projectiles/firebolt.effect" />
 		
 			<collision static="false">
-				<circle offset="0 0" radius="2" projectile="true" />
+				<circle offset="0 0" radius="3" projectile="true" />
 			</collision>
 		</scene>
 	</scenes>

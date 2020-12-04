@@ -158,13 +158,13 @@
 					<string name="class">Modifiers::TriggerEffect</string>
 					<string name="trigger">attack</string>
 					<bool name="target-self">true</bool>
-					<int name="timeout">1850</int>
+					<int name="timeout">2000</int>
 
 					<array name="effects">
 						<dict name="effect">
 							<string name="class">ShootProjectile</string>
 							<string name="projectile">items/projectiles/bullet.unit</string>
-							<int name="dist">5</int>
+							<int name="dist">8</int>
 						</dict>
 					</array>
 				</dict>
@@ -279,21 +279,21 @@
 	
 	<dict> <string name="name">Fire and Ice Pt.II</string>
 			
-			<array name="items">
-				<string>freeze-wand</string>
-				<string>flame-staff</string>
-			</array>
+		<array name="items">
+			<string>freeze-wand</string>
+			<string>flame-staff</string>
+		</array>
+		
+		<dict name="2">
+			<string name="desc">+20 Skill Power</string>
 			
-			<dict name="2">
-				<string name="desc">+20 Skill Power</string>
-				
-				<dict name="modifier">
-					<string name="class">Modifiers::Damage</string>
-					<int name="spell-power">20</int>
-				</dict>
+			<dict name="modifier">
+				<string name="class">Modifiers::Damage</string>
+				<int name="spell-power">20</int>
 			</dict>
 		</dict>
-
+	</dict>
+	
 	<dict> <string name="name">Rings of Blood Magic</string>
 	
 		<array name="items">

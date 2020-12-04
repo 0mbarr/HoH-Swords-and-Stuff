@@ -1,0 +1,16 @@
+<effect looping="false">
+	<param name="angle" default="0" />
+	<param name="height" default="0" />
+	
+	<sprite looping="false" origin="55 55" texture="./scythe_slash.png" material="system/default.mats:projectile"
+	
+		pos-x="0"
+		pos-y="-height"
+		angle="angle">
+		
+		<frame time="200">0 0 111 111</frame>
+		<frame time="200">111 0 111 111</frame>
+		<frame time="150">226 0 111 111</frame>
+		<frame time="150">342 0 111 111</frame>
+	</sprite>
+</effect>

@@ -1,8 +1,9 @@
 <unit netsync="none">
 	<behavior class="RayProjectile">
 		<string name="anim">idle</string>
-		<float name="speed">16</float>
-		<int name="ttl">1000</int>
+		<float name="speed">15</float>
+		<int name="penetration">3</int>
+		<int name="ttl">1200</int>
 		<bool name="blockable">false</bool>
 		
 		<string name="shoot-snd">event:/player/ranger/bomb_explode</string>
@@ -11,13 +12,18 @@
 		<array name="effects">
 		<dict>
 			<string name="class">Damage</string>
-			<int name="physical">32</int>
-			<float name="armor-mul">0.5</float>
+			<int name="physical">80</int>
+			<float name="armor-mul">0.75</float>
 		</dict>
 		<dict>
 			<string name="class">ChanceApplyBuff</string>
-			<float name="chance">0.2</float>
+			<float name="chance">0.3</float>
 			<string name="buff">items/buffs.sval:duelists-edge</string>
+		</dict>
+		<dict>
+			<string name="class">ChanceApplyBuff</string>
+			<float name="chance">0.5</float>
+			<string name="buff">items/buffs.sval:shieldbreaker</string>
 		</dict>
 		</array>
 

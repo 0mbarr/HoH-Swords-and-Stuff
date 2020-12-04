@@ -1,0 +1,205 @@
+<unit netsync="position" save="true" slot="actor">
+	<behavior class="PlayerOwnedSummon">
+		
+		<string name="team">player</string>
+		
+		<bool name="targetable">false</bool>
+		<bool name="crosshair-colors">false</bool>
+		<bool name="floating-hurt">false</bool>
+		
+		<string name="type">beast</string>
+		<int name="hp">9001</int>
+		<int name="armor">999</int>
+		<int name="resistance">999</int>
+		<float name="evade-physical">1</float>
+		<float name="evade-magical">1</float>
+		
+		<int name="ttl">60000</int>
+		<float name="block-projectile-chance">0</float>
+		<bool name="use-player-colors">false</bool>
+				
+		<string name="death-snd">event:/enemy/skeleton/death</string>
+		<string name="gore">effects/gibs/gib_skeleton_1.sval</string>
+				
+		<int name="aggro-range">240</int>
+		
+		<array name="buffs-immune-tags">
+			<string>players</string>
+		</array>
+
+		<dict name="movement">
+			<string name="class">MeleeFollowerMovement</string>
+			<string name="anim-idle">idle 8</string>
+			<string name="anim-walk">walk 8</string>
+
+			<float name="speed">2.8</float>
+			<float name="run-back-speed">4.0</float>
+			<float name="roaming">0.6</float>
+			<int name="roaming-distance">80</int>
+			<int name="run-back-distance">140</int>
+		</dict>
+
+		<array name="skills">
+			<dict>
+				<string name="class">CompositeActorSkill</string>
+				<string name="anim">walk 8</string>
+
+				<int name="cooldown">250</int>
+				<int name="castpoint">50</int>
+				<int name="range">10</int>
+				
+				<string name="offset">attack-pos</string>
+				
+				<array name="actions">
+					<dict>
+						<string name="class">Explode</string>
+						<int name="min-radius">6</int>
+						<int name="radius">6</int>
+						<float name="dist-scaling">1000</float>
+						<float name="team-dmg">0</float>
+						<array name="effects">
+							<dict>
+								<string name="class">Damage</string>
+								<int name="physical">12</int>
+								<bool name="melee">true</bool>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</behavior>
+
+	<scenes start="idle-0 idle-1 idle-2 idle-3 idle-4 idle-5 idle-6 idle-7">
+		<scene name="shared">
+			<minimap_sprite layer="1" origin="1 1" texture="gui/minimap.png" frame="94 3 2 2"/>
+			
+			<effect src="actors/wolf_map.effect" />
+			
+			<collision static="false">
+				
+				<circle offset="0 -5.25" sensor="true" shoot-through="false" aim-through="true" radius="3.5" />
+			</collision>
+		</scene>
+
+		<scene name="idle-0">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame>0 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-7">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame>24 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-6">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame>48 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-5">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame>72 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-4">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame>96 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-3">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame>120 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-2">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame>144 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="idle-1">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame>168 0 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-0">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame time="225">0 24 24 24</frame>
+				<frame time="225">0 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-7">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame time="225">24 24 24 24</frame>
+				<frame time="225">24 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-6">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame time="225">48 24 24 24</frame>
+				<frame time="225">48 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-5">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame time="225">72 24 24 24</frame>
+				<frame time="225">72 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-4">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame time="225">96 24 24 24</frame>
+				<frame time="225">96 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-3">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame time="225">120 24 24 24</frame>
+				<frame time="225">120 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-2">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame time="225">144 24 24 24</frame>
+				<frame time="225">144 48 24 24</frame>
+			</sprite>
+		</scene>
+
+		<scene name="walk-1">
+			<scene src="shared" />
+			<sprite origin="12 14" looping="true" texture="actors/wolf.png" material="system/default.mats:ally">
+				<frame time="225">168 24 24 24</frame>
+				<frame time="225">168 48 24 24</frame>
+			</sprite>
+		</scene>
+	</scenes>
+</unit>

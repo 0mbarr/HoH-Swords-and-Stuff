@@ -66,11 +66,11 @@
 		</dict>
 	</dict>
 	
-	<dict name="goodberry">
+	<dict name="heal-song">
 		<string name="tag">healing</string>
 		<int name="duration">1000</int>
 		
-		<float name="scale">1.5</float>
+		<float name="scale">1.25</float>
 	</dict>
 	
 	<dict name="fiber-wire">
@@ -141,11 +141,76 @@
 	</dict>
 	
 	<dict name="oriana-cloak">
-		<int name="duration">2000</int>
+		<int name="duration">5000</int>
 		
 		<dict name="modifier">
 			<string name="class">Modifiers::CriticalHit</string>
-			<float name="chance">0.25</float>
+			<float name="chance">1</float>
+		</dict>
+		
+		<array name="hud">
+			<string>gui/sas_hud_icons.png</string>
+			<int>100</int><vec4>0 0 12 12</vec4>
+		</array>
+	</dict>
+	
+	<dict name="petrified-leaf">
+		<int name="duration">1000</int>
+		
+		<float name="dmg-taken-mul">0.2</float>
+		
+		<array name="colors">
+			<vec4>0.05 0.05 0.05 0.9</vec4>
+			<vec4>0.08 0.08 0.08 0.9</vec4>
+			<vec4>0.04 0.04 0.04 0.9</vec4>
+		</array>
+		
+		<array name="hud">
+			<string>gui/sas_hud_icons.png</string>
+			<int>100</int><vec4>12 0 12 12</vec4>
+		</array>
+	</dict>
+	
+	<dict name="void-pendant">
+		<int name="duration">3000</int>
+		
+		<bool name="free-mana">true</bool>
+		
+		<array name="hud">
+			<string>gui/sas_hud_icons.png</string>
+			<int>100</int><vec4>24 0 12 12</vec4>
+		</array>
+	</dict>
+	
+	<dict name="vorpal">
+		<int name="duration">250</int>
+		<bool name="debuff">true</bool>
+		
+		<!--<string name="icon">items/icons/wither.unit</string>-->
+		
+		<dict name="tick">
+			<int name="freq">200</int>
+			<dict name="effect">
+				<string name="class">Damage</string>
+				<int name="magical">10000000</int>
+				<bool name="can-kill">true</bool>
+				<bool name="true-strike">true</bool>
+			</dict>
 		</dict>
 	</dict>
+	
+	<dict name="ioun">
+		<int name="duration">5000</int>
+		<bool name="debuff">false</bool>
+		<string name="icon">items/icons/ioun.unit</string>
+		
+		<dict name="tick">
+			<int name="freq">1000</int>
+			<dict name="effect">
+				<string name="class">Decimate</string>
+				<float name="mana">-0.02</float>
+			</dict>
+		</dict>
+	</dict>
+
 </svals>

@@ -9,8 +9,10 @@ namespace Modifiers
             super(unit, params);
 
             auto arrUnits = GetParamArray(unit, params, "filters");
-            for (uint i = 0; i < arrUnits.length(); i++)
+            for (uint i = 0; i < arrUnits.length(); i++){
                 m_enemyUnit.insertLast(arrUnits[i].GetString());
+				//print(m_enemyUnit[i]);
+				}
         }
 		
 		void Initialize(SyncVerb verb, uint id, uint modId) override
@@ -23,15 +25,18 @@ namespace Modifiers
 
         bool Filter(PlayerBase@ player, Actor@ enemy) override
         {
-           /* auto params = enemy.GetBehaviorParams();
- 
-            string eb = GetParamString(UnitPtr(), params, "beastiary-name", false);
-			PrintError("You are attacking: "+ eb);
-            if (eb is null)
+			bool result = false;
+			auto eb = cast<CompositeActorBehavior>(enemy);
+			if (eb is null)
                 return false;
-
-            return eb != -1;*/
-			return false;
+			
+			//print("You are attacking: "+ eb.m_bestiaryOverride);
+			
+			for (uint i = 0; i < m_enemyUnit.length(); i++){
+			    if (m_enemyUnit[i] == eb.m_bestiaryOverride)
+					result = true; break;
+			}
+			return result;
         }
     }
 }

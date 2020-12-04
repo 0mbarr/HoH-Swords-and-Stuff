@@ -1,0 +1,14 @@
+<unit>
+	<scenes>
+		<scene>
+			<sprite layer="1" origin="8 16" texture="./sas_icons.png" material="system/default.mats:bright-noxray">
+                <frame time="200">80 38 16 26</frame>
+				<frame time="300">96 38 16 26</frame>
+				<frame time="200">112 38 16 26</frame>
+				<frame time="300">96 38 16 26</frame>
+				<frame time="200">80 38 16 26</frame>
+				<frame time="300">96 38 16 26</frame>
+			</sprite>
+		</scene>
+	</scenes>
+</unit>

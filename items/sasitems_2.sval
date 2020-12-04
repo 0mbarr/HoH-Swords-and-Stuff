@@ -723,6 +723,7 @@
 			<dict name="modifier">
 				<string name="class">Modifiers::Speed</string>
 				<float name="attack-mul">1.1</float>
+				<float name="skill-mul">1.1</float>
 			</dict>
 		</dict>	
 	</dict>
@@ -842,8 +843,8 @@
 	<dict name="scroll-of-breath">
 		<string name="name">Scroll of the Deep Breath</string>
 		<string name="desc">.item.scroll-of-breath.desc</string>
-		<string name="quality">uncommon</string>
-		<int name="cost">1500</int>
+		<string name="quality">common</string>
+		<int name="cost">500</int>
 
 		<bool name="has-blueprints">true</bool>
 
@@ -887,12 +888,59 @@
 		<string name="quality">legendary</string>
 		<int name="cost">1000000</int>
 		
+		<bool name="can-attune">false</bool>
+		
 		<array name="icon">
-		  <string>items/icons/crescentrose.png</string>
-		  <int>100</int><vec4>0 0 102 64</vec4>
+		  <string>items/sasitems.png</string>
+		  <int>100</int><vec4>84 204 12 12</vec4>
 		</array>
+
 		<array name="icon-scene">
-			<string name="effect">items/icons/crescent_rose.png</string>
+			<string>items/icons/crescentrose.png</string>
+			<int>100</int><vec4>0 0 102 64</vec4>
+		</array>
+		
+		<array name="modifiers">
+			<dict>
+				<string name="class">Modifiers::MoveFilter</string>
+				<bool name="invert">true</bool>
+				<dict name="modifier">
+					<string name="class">Modifiers::TriggerEffect</string>
+					<string name="trigger">attack</string>
+					<bool name="target-self">true</bool>
+					<float name="chance">1</float>
+					<int name="timeout">2000</int>
+					<dict name="effect">
+							<string name="class">ShootProjectile</string>
+							<string name="projectile">items/projectiles/bullet_sniper.unit</string>
+							<int name="dist">10</int>
+					</dict>
+				</dict>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::TriggerEffect</string>
+				<string name="trigger">attack</string>
+				<int name="counter">5</int>
+				<float name="chance">1</float>	
+				<bool name="target-self">true</bool>
+				<array name="effects">
+					<dict>
+						<string name="class">Explode</string>
+						<string name="fx">items/projectiles/scythe_slash.effect</string>
+						<int name="radius">48</int>
+						<float name="dist-scaling">1000</float>
+						<dict name="effect">
+							<string name="class">Damage</string>
+							<int name="physical">100</int>
+							<float name="armor-mul">0.75</float>
+						</dict>
+					</dict>
+					<dict>
+						<string name="class">PlaySound</string>
+						<string name="sound">event:/enemy/boss_wraith/attack-scythe</string>
+					</dict>
+				</array>
+			</dict>
 		</array>
 	</dict>
 	
@@ -1009,7 +1057,7 @@
 		<string name="name">Doggy Treat</string>
 		<string name="desc">.item.dog-treat.desc</string>
 		<string name="quality">uncommon</string>
-		<int name="cost">1500</int>
+		<int name="cost">2100</int>
 		
 		<bool name="has-blueprints">true</bool>
 		<bool name="can-attune">false</bool>
@@ -1018,13 +1066,30 @@
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>60 132 12 12</vec4>
 		</array>
+		
+		<dict name="modifier">
+			<string name="class">Modifiers::TriggerEffect</string>
+			<string name="trigger">drinkpotion</string>
+			<bool name="target-self">true</bool>
+			<float name="chance">1</float>
+			<int name="timeout">59900</int>
+			<array name="effects">
+				<dict name="effect">
+					<string name="class">Modifiers::SpawnUnit</string>
+					<string name="unit">actors/wolf_summon.unit</string>
+					<bool name="safe-spawn">false</bool>
+					<int name="spawn-dist">0</int>
+					<vec2 name="offset">0 0</vec2>
+				</dict>
+			</array>
+		</dict>
 	</dict>
 
-	<dict name="fairy-bottle">
+	<!-- <dict name="fairy-bottle">
 		<string name="name">Bottled Fairy</string>
 		<string name="desc">.item.fairy-bottle.desc</string>
 		<string name="quality">rare</string>
-		<int name="cost">1500</int>
+		<int name="cost">6400</int>
 		
 		<bool name="can-attune">false</bool>
 		<bool name="has-blueprints">true</bool>	
@@ -1034,15 +1099,33 @@
 			<int>100</int><vec4>72 132 12 12</vec4>
 		</array>
 	</dict>
-	
+	-->
+
 	<dict name="necronomicon">
 		<string name="name">Necronomicon</string>
 		<string name="desc">.item.necronomicon.desc</string>
-		<string name="quality">uncommon</string>
-		<int name="cost">1500</int>
+		<string name="quality">rare</string>
+		<int name="cost">5000</int>
 		
 		<bool name="has-blueprints">true</bool>
 		<bool name="can-attune">false</bool>
+		
+		<dict name="modifier">
+			<string name="class">Modifiers::TriggerEffect</string>
+			<string name="trigger">kill</string>
+			<bool name="target-self">false</bool>
+			<float name="chance">0.02</float>
+			<int name="timeout">300</int>
+			<array name="effects">
+				<dict name="effect">
+					<string name="class">Modifiers::SpawnUnit</string>
+					<string name="unit">actors/necro_summon.unit</string>
+					<bool name="safe-spawn">false</bool>
+					<int name="spawn-dist">0</int>
+					<vec2 name="offset">0 0</vec2>
+				</dict>
+			</array>
+		</dict>
 		
 		<array name="icon">
 			<string>items/sasitems.png</string>
@@ -1050,7 +1133,7 @@
 		</array>
 	</dict>
 	
-	<dict name="thunder-ring">
+	<!-- <dict name="thunder-ring">
 		<string name="name">Ring of Thunderwave</string>
 		<string name="desc">.item.thunder-ring.desc</string>
 		<string name="quality">uncommon</string>
@@ -1067,20 +1150,21 @@
 			<string name="class">Modifiers::TriggerEffect</string>
 			<string name="trigger">hit</string>
 			<bool name="target-self">true</bool>
-			<float name="chance">0.25</float>
+			<float name="chance">1.0</float>
 			<int name="timeout">5000</int>
 			<array name="effects">
 				<dict name="effect">
 					<string name="class">SpawnUnit</string>
+					<string name="unit">items/projectiles/thunder_wave.unit</string>
 					<bool name="safe-spawn">true</bool>
 					<int name="spawn-dist">0</int>
 					<vec2 name="offset">0 0</vec2>
-					<string name="unit">players/ranger/bomb_2.unit</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
-	
+	-->
+
 	<dict name="stone-scroll">
 		<string name="name">Scroll of Flesh to Stone</string>
 		<string name="desc">.item.stone-scroll.desc</string>
@@ -1093,6 +1177,18 @@
 			<string>items/sasitems.png</string>
 			<int>100</int><vec4>108 132 12 12</vec4>
 		</array>
+		
+		<dict name="modifier">
+			<string name="class">Modifiers::TriggerEffect</string>
+			<string name="trigger">hit</string>
+			<float name="chance">0.05</float>
+			<bool name="target-self">false</bool>
+
+			<dict name="effect">
+				<string name="class">ApplyBuff</string>
+				<string name="buff">items/buffs.sval:medusas-charm-2</string>
+			</dict>
+		</dict>
 	</dict>
 
 	<dict name="bloodlust-blade">
@@ -1111,7 +1207,7 @@
 		<dict name="modifier">
 			<string name="class">Modifiers::BasicPerCombo</string>
 			<int name="attack-power">1</int>
-			<int name="total-cap">100</int>
+			<int name="total-cap">50</int>
 		</dict>
 	</dict>
 	
@@ -1121,7 +1217,8 @@
 		<string name="quality">common</string>
 		<int name="cost">800</int>
 		
-		<bool name="has-blueprints">true</bool>	
+		<bool name="has-blueprints">true</bool>
+		<bool name="can-attune">false</bool>
 		
 		<array name="icon">
 			<string>items/sasitems.png</string>
@@ -1142,4 +1239,178 @@
 		</dict>
 	</dict>
 	
+	<dict name="petrified-leaf">
+		<string name="name">Petrified Leaf</string>
+		<string name="desc">.item.petrified-leaf.desc</string>
+		<string name="quality">epic</string>
+		<int name="cost">20000</int>
+		
+		<array name="icon">
+		  <string>items/sasitems.png</string>
+		  <int>100</int><vec4>24 144 12 12</vec4>
+		</array>
+		
+		<dict name="modifier">
+			<string name="class">Modifiers::MoveFilter</string>
+			<bool name="invert">true</bool>
+			<array name="modifiers">
+				<dict name="modifier">
+					<string name="class">Modifiers::BlockProjectile</string>
+					<int name="arc">360</int>
+					<int name="offset">0</int>
+				</dict>
+				<dict>
+					<string name="class">Modifiers::TimedTriggerEffect</string>
+					<float name="chance">1</float>
+					<int name="timeout">6000</int>
+					<int name="freq">1000</int>
+					<bool name="target-self">true</bool>
+					<dict name="effect">
+						<string name="class">ApplyBuff</string>
+						<string name="buff">items/sas_buffs.sval:petrified-leaf</string>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+	
+	<dict name="shop-membership">
+		<string name="name">Membership Card</string>
+		<string name="desc">.item.shop-membership.desc</string>
+		<string name="quality">rare</string>
+		<int name="cost">2500</int>
+
+		<bool name="can-attune">false</bool>
+		
+		<array name="icon">
+		  <string>items/sasitems.png</string>
+		  <int>100</int><vec4>36 144 12 12</vec4>
+		</array>
+		
+		<dict name="modifier">
+			<string name="class">Modifiers::DungeonStoreItems</string>
+			<int name="num">1</int>
+		</dict>
+	</dict>
+	
+	<dict name="void-pendant">
+		<string name="name">Void Pendant</string>
+		<string name="desc">.item.void-pendant.desc</string>
+		<string name="quality">rare</string>
+		<int name="cost">2000</int>
+
+		<bool name="can-attune">false</bool>
+
+		<array name="icon">
+		  <string>items/sasitems.png</string>
+		  <int>100</int><vec4>48 144 12 12</vec4>
+		</array>
+	
+		<dict name="modifier">
+			<string name="class">Modifiers::ManaFilter</string>
+			<float name="below">0.5</float>
+			<dict name="modifier">
+				<string name="class">Modifiers::TriggerEffect</string>
+				<string name="trigger">castspell</string>
+				<float name="chance">0.33</float>
+				<bool name="target-self">true</bool>
+				<array name="effects">
+					<dict name="effect">
+						<string name="class">ApplyBuff</string>
+						<string name="buff">items/sas_buffs.sval:void-pendant</string>
+					</dict>
+					<dict>
+						<string name="class">PlaySound</string>
+						<string name="sound">event:/player/warlock/bolt-fail</string>
+					</dict>
+				</array>	
+			</dict>
+		</dict>
+	</dict>
+	
+	<dict name="vorpal-blade">
+		<string name="name">Vorpal Blade</string>
+		<string name="desc">.item.vorpal-blade.desc</string>
+		<string name="quality">rare</string>
+		<int name="cost">1500</int>
+		sa
+		<bool name="can-attune">false</bool>
+		
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>60 144 12 12</vec4>
+		</array>
+	
+		<dict name="modifier">
+			<string name="class">Modifiers::EnemyHealthFilter</string>
+			<float name="below">0.2</float>
+			<dict name="modifier">
+				<string name="class">Modifiers::TriggerEffect</string>
+				<string name="trigger">hit</string>
+				<float name="chance">0.05</float>
+				<array name="effects">
+					<dict name="effect">
+						<string name="class">ApplyBuff</string>
+						<string name="buff">items/sas_buffs.sval:vorpal</string>
+					</dict>
+					<dict>
+						<string name="class">PlaySound</string>
+						<string name="sound">event:/player/warlock/bolt-fail</string>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+	
+	<dict name="stone-ioun">
+		<string name="name">Ioun Stone</string>
+		<string name="desc">.item.stone-ioun.desc</string>
+		<string name="quality">rare</string>
+		<int name="cost">5000</int>
+		
+		<bool name="has-blueprints">true</bool>	
+			
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>72 144 12 12</vec4>
+		</array>
+
+		<array name="modifiers">
+			<dict name="modifier">
+				<string name="class">Modifiers::Buff</string>
+				<int name="freq">5000</int>
+				<string name="buff">items/sas_buffs.sval:ioun</string>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::Armor</string>
+				<float name="resistance">20</float>
+			</dict>
+		</array>
+	</dict>
+
+	<dict name="ring-sage">
+		<string name="name">Ring of the Sage</string>
+		<string name="desc">.item.ring-sage.desc</string>
+		<string name="quality">uncommon</string>
+		<int name="cost">1200</int>
+		
+		<bool name="has-blueprints">true</bool>	
+			
+		<array name="icon">
+			<string>items/sasitems.png</string>
+			<int>100</int><vec4>84 144 12 12</vec4>
+		</array>
+		
+		<array name="modifiers">
+			<dict name="modifier">
+				<string name="class">Modifiers::Stats</string>
+				<int name="mana">20</int>
+			</dict>
+			<dict>
+				<string name="class">Modifiers::Speed</string>
+				<float name="skill-mul">1.2</float>
+			</dict>
+		</array>
+	</dict>
+
 </dict>

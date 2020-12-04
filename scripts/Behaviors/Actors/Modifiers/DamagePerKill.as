@@ -5,7 +5,7 @@ namespace Modifiers
 		float m_dmgScale;
 		float m_dmgCap;
 		float m_damageMul;
-		
+		int m_initialKills;
 	
 		DamagePerKill(UnitPtr unit, SValue& params)
 		{
@@ -18,6 +18,6 @@ namespace Modifiers
 		bool HasDamageMul() override { return true; }
 		
 		vec2 DamageMul(PlayerBase@ player, Actor@ enemy) override{ 
-			return vec2(1.0f + min(m_dmgCap, player.m_record.statisticsSession.GetStatInt("enemies-killed") * m_dmgScale));}
+			return vec2(1.0f + min(m_dmgCap, (player.m_record.statisticsSession.GetStatInt("enemies-killed")-m_initialKills) * m_dmgScale));}
 	}
 }
