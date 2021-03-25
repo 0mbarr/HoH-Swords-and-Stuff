@@ -11,7 +11,7 @@
 		<array name="effects">
 		<dict>
 			<string name="class">Damage</string>
-			<int name="physical">32</int>
+			<int name="physical">24</int>
 			<float name="armor-mul">0.5</float>
 		</dict>
 		<dict>

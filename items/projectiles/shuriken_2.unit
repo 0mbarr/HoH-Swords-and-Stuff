@@ -8,7 +8,7 @@
 		<array name="effects">
 			<dict>
 				<string name="class">Damage</string>
-				<int name="physical">40</int>
+				<int name="physical">12</int>
 			</dict>
 			<dict>
 				<string name="class">ApplyBuff</string>

@@ -13,7 +13,7 @@
 		<array name="effects">
 			<dict>
 				<string name="class">Damage</string>
-				<int name="magical">50</int>
+				<int name="magical">32</int>
 			</dict>
 			<dict name="effect">
 				<string name="class">SpawnEffect</string>

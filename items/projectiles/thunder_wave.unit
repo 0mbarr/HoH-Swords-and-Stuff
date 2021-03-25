@@ -14,7 +14,7 @@
 			<array name="effects">
 				<dict>
 					<string name="class">Damage</string>
-					<int name="magical">20</int>
+					<int name="magical">14</int>
 				</dict>
 				<dict>
 					<string name="class">ApplyBuff</string>

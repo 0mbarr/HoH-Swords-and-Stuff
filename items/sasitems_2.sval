@@ -213,7 +213,7 @@
 		<!--Eventualy make a projectile that does this-->
 			<dict>
 				<string name="class">Modifiers::Damage</string>
-				<int name="spell-power">30</int>
+				<int name="spell-power">25</int>
 			</dict>
 			<dict name="modifier">
 				<string name="class">Modifiers::TriggerEffect</string>
@@ -244,14 +244,20 @@
 		<!--Eventualy make a projectile that does this-->
 			<dict>
 				<string name="class">Modifiers::Damage</string>
-				<int name="spell-power">10</int>
+				<int name="spell-power">25</int>
 			</dict>
 			<dict name="modifier">
 				<string name="class">Modifiers::TriggerEffect</string>
-				<string name="trigger">hit</string>
+				<string name="trigger">castspell</string>
+				<bool name="target-self">true</bool>
+				<float name="chance">1</float>
+				<int name="timeout">3000</int>
 				<dict name="effect">
-					<string name="class">ApplyBuff</string>
-					<string name="buff">items/sas_buffs.sval:flame-staff</string>
+					<string name="class">ShootProjectileFan</string>
+					<string name="projectile">items/projectiles/salamander_fireball.unit</string>
+					<int name="dist">5</int>
+					<int name="projectiles">3</int>
+					<int name="spread">20</int>
 				</dict>
 			</dict>
 		</array>

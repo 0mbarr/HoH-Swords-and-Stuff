@@ -94,7 +94,7 @@
 	<string name="item.maze-circlet.desc">Fortify!!!\n+10 Skill Power\n+10 Resistance</string>
 	<string name="item.shield-weed.desc">Just keep rolling and rolling...\n+10 Armor\n+0.5 Move speed\n+4 Stamina regen</string>
 	<string name="item.freeze-wand.desc">Smashing!\n+25 Skill Power</string> <!-- \nUnleash 1 Ice Bomb that has a 20% chance to freeze enemies when using a skill -->
-	<string name="item.flame-staff.desc">Spicy Bois Unite!\n+25 Skill Power</string> <!-- \nUnleash 1 Fireball that burns enemies when using a skill -->
+	<string name="item.flame-staff.desc">Spicy Bois Unite!\n+25 Skill Power\nUnleash 3 Slithering Fireballs that burns enemies when using a skill\n3 Second cooldown</string>
 	<string name="item.black-rose.desc">Wilting and blushing\nPrimary attacks have a 20% chance to inflict withering</string>
 	<string name="item.secret-password.desc">Shh... dont tell...</string>
 	<string name="item.focus-sash.desc">It loves you\nPrevent death once every 5 minutes</string>

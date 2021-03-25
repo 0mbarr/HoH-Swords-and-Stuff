@@ -11,7 +11,7 @@
 		<array name="effects">
 			<dict>
 				<string name="class">Damage</string>
-				<int name="physical">35</int>
+				<int name="physical">6</int>
 			</dict>
 		</array>
 		<dict name="effect-params">
