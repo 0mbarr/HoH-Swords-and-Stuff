@@ -1,6 +1,6 @@
 <loader>AddItemFile</loader>
 <dict>
-<!-- 1.0 Items -->
+<!-- 1.0 Items (9) -->
 	<dict name="orb-sword">
 		<string name="name">Caster's Blade</string>
 		<string name="desc">.item.orb-sword.desc</string>
@@ -224,7 +224,7 @@
 		   </dict>
 		</array>
 	</dict>
-<!-- 1.1 Items -->
+<!-- 1.1 Items (7)[18] -->
 	<dict name="crowbar">
 		<string name="name">Red Crowbar</string>
 		<string name="desc">.item.crowbar.desc</string>
@@ -412,7 +412,7 @@
 		</array>
 	</dict>
 	
-<!-- 1.2 Items -->
+<!-- 1.2 Items (11)[29] -->
 	<dict name="lucky-harvester">
 		<string name="name">Lucky Harvester</string>
 		<string name="desc">.item.lucky-harvester.desc</string>
@@ -766,7 +766,7 @@
 		</dict>
 	</dict>
 	
-<!-- 1.3 "Sword Update" Items -->
+<!-- 1.3 "Sword Update" Items (25)[54] -->
 	<dict name="gem-sword">
 		<string name="name">Blue Gem Sword</string>
 		<string name="desc">.item.gem-sword.desc</string>
@@ -1432,7 +1432,7 @@
 		</array>
 	</dict>
 	
-<!-- 1.4 Items -->	
+<!-- 1.4 Items (19)[73] -->	
 	<dict name="calm-cactus">
 		<string name="name">Calming Cactus</string>
 		<string name="desc">.item.calm-cactus.desc</string>
@@ -1882,7 +1882,7 @@
 		 </array>
 	</dict>
 	
-<!-- 1.4.1 Items -->
+<!-- 1.4.1 Items (2)[75] -->
 	<dict name="left-sheild-pauldron">
 		<string name="name">Left Pauldron of Sheilding</string>
 		<string name="desc">.item.left-sheild-pauldron.desc</string>

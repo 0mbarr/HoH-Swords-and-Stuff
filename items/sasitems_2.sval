@@ -1,6 +1,6 @@
 <loader>AddItemFile</loader>
 <dict>
-<!-- 1.5 "Staffs and Stuff Box" Items -->
+<!-- 1.5 "Staffs and Stuff Box" Items (15)[90] -->
 	<dict name="megumin-staff">
 		<string name="name">Arc Wizard Explosion Staff</string>
 		<string name="desc">.item.megumin-staff.desc</string>
@@ -443,7 +443,7 @@
 			</dict>
 		</array>
 	</dict>
-<!-- 1.5.2 Items -->
+<!-- 1.5.2 Items (4)[94] -->
 	<dict name="black-shirt">
 		<string name="name">Black Shirt</string>
 		<string name="desc">.item.black-shirt.desc</string>
@@ -559,7 +559,7 @@
 	</dict>
 	
 	<dict name=""-->
-<!-- 1.5.5 "Language Migration" Items-->
+<!-- 1.5.5 "Language Migration" Items (10)[104] -->
 	<dict name="combo-crystal">
 		<string name="name">Combo Sphere Shard</string>
 		<string name="desc">.item.combo-crystal.desc</string>
@@ -803,7 +803,7 @@
 			</dict>
 		</dict>
 	</dict>
-<!-- 1.5.9 Items -->
+<!-- 1.5.9 Items (8)[112] -->
 	<dict name="minor-reflection-ring">
 		<string name="name">Minor Ring of Reflection</string>
 		<string name="desc">.item.minor-reflection-ring.desc</string>
@@ -1058,7 +1058,7 @@
 		</array>
 	</dict>
 
-<!-- 1.6 Items -->
+<!-- 1.6 Items (11)[123] -->
 	<dict name="dog-treat">
 		<string name="name">Doggy Treat</string>
 		<string name="desc">.item.dog-treat.desc</string>
