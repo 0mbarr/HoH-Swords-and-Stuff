@@ -1707,7 +1707,7 @@
 		</array>
 		
 		<dict name="modifier">
-			<string name="class">Modifiers::HealthPerKill</string>
+			<string name="class">Modifiers::BasicPerKill</string>
 			<int name="kills">25</int>
 			<int name="health-cap">250</int>
 		</dict>

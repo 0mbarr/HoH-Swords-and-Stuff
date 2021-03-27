@@ -33,8 +33,10 @@ namespace Modifiers
 			//print("You are attacking: "+ eb.m_bestiaryOverride);
 			
 			for (uint i = 0; i < m_enemyUnit.length(); i++){
-			    if (m_enemyUnit[i] == eb.m_bestiaryOverride)
-					result = true; break;
+			    if (m_enemyUnit[i] == eb.m_bestiaryOverride){
+					result = true; 
+					break;
+				}
 			}
 			return result;
         }

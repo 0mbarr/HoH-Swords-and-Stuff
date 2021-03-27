@@ -11,7 +11,7 @@
 		</array>
 		
 		<dict name="1">
-			<string name="desc">-10% Spellcost</string>
+			<string name="desc">.item.set.thaum-gear.desc.1</string>
 			
 			<dict name="modifier">
 					<string name="class">Modifiers::SpellCost</string>
@@ -19,7 +19,7 @@
 			</dict>
 		</dict>
 		<dict name="2">
-			<string name="desc">-20% Spellcost</string>
+			<string name="desc">.item.set.thaum-gear.desc.2</string>
 			
 				<dict name="modifier">
 					<string name="class">Modifiers::SpellCost</string>
@@ -27,7 +27,7 @@
 				</dict>
 		</dict>
 		<dict name="3">
-			<string name="desc">-30% Spellcost</string>
+			<string name="desc">.item.set.thaum-gear.desc.3</string>
 			
 				<dict name="modifier">
 					<string name="class">Modifiers::SpellCost</string>
@@ -35,7 +35,7 @@
 				</dict>
 		</dict>
 		<dict name="4">
-			<string name="desc">-40% Spellcost total</string>
+			<string name="desc">.item.set.thaum-gear.desc.4</string>
 			
 				<dict name="modifier">
 					<string name="class">Modifiers::SpellCost</string>
@@ -108,7 +108,7 @@
 			</array>
 			
 			<dict name="2">
-				<string name="desc">+15% damage</string>
+				<string name="desc">.item.set.sharpening-kit.desc.2</string>
 				
 				<dict name="modifier">
 					<string name="class">Modifiers::Damage</string>
@@ -362,52 +362,44 @@
 		</array>
 	
 		<dict name="2">
-			<string name="desc">-5% Damage Taken when under 25% Health</string>
+			<string name="desc">+5% Base Health and Mana</string>
 			
 			<array name="modifiers">
 				<dict>
-					<string name="class">Modifiers::HealthFilter</string>
-					<float name="below">0.25</float>
-					<dict name="modifier">
-						<string name="class">Modifiers::Armor</string>
-						<float name="dmg-taken-mul">0.95</float>
-					</dict>
+					<string name="class">Modifiers::StatsBase</string>
+					<float name="health">0.05</float>
+					<float name="mana">0.05</float>
 				</dict>
 			</array>
 			
 		</dict>
 		
 		<dict name="4">
-			<string name="desc">-10% Damage Taken when under 30% Health</string>
+			<string name="desc">+10% Base Health and Mana</string>
 			
 			<array name="modifiers">
 				<dict>
-					<string name="class">Modifiers::HealthFilter</string>
-					<float name="below">0.30</float>
-					<dict name="modifier">
-						<string name="class">Modifiers::Armor</string>
-						<float name="dmg-taken-mul">0.9</float>
-					</dict>
+					<string name="class">Modifiers::StatsBase</string>
+					<float name="health">0.1</float>
+					<float name="mana">0.1</float>
 				</dict>
 			</array>
 		</dict>
 		
 		<dict name="6">
-			<string name="desc">Every 25 Kills increase Max Health(+1000 Max)&#xA;-15% Damage Taken when under 50% Health</string>
+			<string name="desc">Every 25 Kills increase Max Health and Mana(Up to 1000 Max HP &#xA; 1500 Mana)&#xA;+25% Base Health and Mana</string>
 			
 			<array name="modifiers">
 				<dict>
-					<string name="class">Modifiers::HealthPerKill</string>
+					<string name="class">Modifiers::BasicPerKill</string>
 					<int name="kills">25</int>
 					<int name="health-cap">1000</int>
+					<int name="mana-cap">1500</int>
 				</dict>
 				<dict>
-					<string name="class">Modifiers::HealthFilter</string>
-					<float name="below">0.5</float>
-					<dict name="modifier">
-						<string name="class">Modifiers::Armor</string>
-						<float name="dmg-taken-mul">0.85</float>
-					</dict>
+					<string name="class">Modifiers::StatsBase</string>
+					<float name="health">0.25</float>
+					<float name="mana">0.25</float>
 				</dict>
 			</array>
 		</dict>

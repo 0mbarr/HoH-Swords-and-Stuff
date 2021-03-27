@@ -73,7 +73,7 @@
 	<string name="item.orianas-cloak.desc">I hate all of you...\nEvery 25 kills grants a buff that guarantees crits for 3 seconds\n 10 second cooldown</string>
 	<string name="item.power-banner.desc">This is my spot now!\n1% chance to drop a banner that heals and reduces damage</string>
 	<string name="item.mythril-boots.desc">The true chad footwear\n25% less Trap Damage</string>
-	<string name="item.bruiser-blood.desc">It's type O- right..?\nEvery 25 kills grants +1 Max Health\nUp to 250 Max</string>
+	<string name="item.bruiser-blood.desc">It's type O- right..?\nEvery 25 kills grants +1 Max Health\nUp to 250 Max HP</string>
 	<string name="item.fae-flute.desc">Smooth serenades...\nYou and Nearby Allies gain +50% Healing from all sources</string>
 	<string name="item.antidote.desc">Now with new Lemon flavor!\nImmunity to Poison</string>
 	<string name="item.glowing-water.desc">Tastes great in food and drinks!\n+0.3 Mana Regen</string>
@@ -116,7 +116,7 @@
 	<string name="item.sigil-void.desc">You feel bad? Just don't!\nWhen Below 50% health gain immunity to most debuffs</string>
 	<string name="item.sigil-haste.desc">Action Surge!\nWhen below 50% health gain +10% Attack Speed</string>
 	<string name="item.sigil-capacity.desc">Emergency backup!\nWhen below 50% health gain +50 Mana and +1 Mana Regen</string>
-	<string name="item.blood-orb.desc">Filled with your life essence\n+15% base health</string>
+	<string name="item.blood-orb.desc">Filled with life essence\nEvery 25 Kills will add +1 Health and Mana.\nMax HP 250, Max MP 300</string>
 	<string name="item.star-caller.desc">Where is the sky?\nStars fall upon stuck enemies dealing 30 Physical Damage</string>
 	<!-- 1.5.9 items -->
 	<string name="item.minor-reflection-ring.desc">No U\nReflect up to 5 Magical Damage</string>
@@ -143,5 +143,13 @@
 	<string name="item.stone-ioun.desc">Make sure no one steals it!\n+2% Mana Regen per Second\n+30 Resistance</string>
 	<string name="item.ring-sage.desc">Belonged to everyone at one point or another\n+20 Mana\n-20% Skill Cooldown</string>
 	<!-- <string name="item..desc"></string> -->
+	<!-- !!! Item Sets !!! -->
+	<string name="item.set.thaum-gear.desc.1">-10% Spellcost</string>
+	<string name="item.set.thaum-gear.desc.2">-20% Spellcost</string>
+	<string name="item.set.thaum-gear.desc.3">-30% Spellcost</string>
+	<string name="item.set.thaum-gear.desc.4">-40% Spellcost</string>
+	<string name="item.set.old-ninja-gear.desc.2">NINJA VANISH!\n25% Chance to drop a smoke bomb when evading\n+5% Evade Chance</string>
+	<string name="item.set.old-ninja-gear.desc.3">+12% Evade Chance Total</string>
+	
 	
 </lang>

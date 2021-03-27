@@ -37,20 +37,29 @@ namespace Modifiers
 		}	
 
 		bool HasDamagePower() override { return true;}
+		
 		bool HasStatsAdd() override { return true;}
 		bool HasArmorAdd() override { return true;}
 		
 		ivec2 DamagePower(PlayerBase@ player, Actor@ enemy) override {
 			return ivec2(
 				min(int((m_dmgPower.x * player.m_comboCount)/m_scale), m_TotalCap),
-				min(int((m_dmgPower.y * player.m_comboCount)/m_scale), m_TotalCap));}
+				min(int((m_dmgPower.y * player.m_comboCount)/m_scale), m_TotalCap));
+		}
+		ivec2 AttackDamageAdd(PlayerBase@ player, Actor@ enemy, DamageInfo@ di) override { 
+			return ivec2(
+				min(int((m_dmgAdd.x * player.m_comboCount)/m_scale), m_TotalCap),
+				min(int((m_dmgAdd.x * player.m_comboCount)/m_scale), m_TotalCap)); 
+		}
 		ivec2 StatsAdd(PlayerBase@ player) override { 
 			return ivec2(
 				min(int((m_statsAdd.x * player.m_comboCount)/m_scale), m_TotalCap),
-				min(int((m_statsAdd.y * player.m_comboCount)/m_scale), m_TotalCap));}
+				min(int((m_statsAdd.y * player.m_comboCount)/m_scale), m_TotalCap));
+		}
 		vec2 ArmorAdd(PlayerBase@ player, Actor@ enemy) override {
 			return vec2(
 				min((m_armorAdd.x * player.m_comboCount)/m_scale, m_TotalCap),
-				min((m_armorAdd.y * player.m_comboCount)/m_scale, m_TotalCap));}
+				min((m_armorAdd.y * player.m_comboCount)/m_scale, m_TotalCap));
+		}
 	}
 }
