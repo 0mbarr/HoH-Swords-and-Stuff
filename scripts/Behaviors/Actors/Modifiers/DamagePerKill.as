@@ -11,8 +11,9 @@ namespace Modifiers
 	
 		DamagePerKill(UnitPtr unit, SValue& params)
 		{
-			m_initialKills = player.m_record.statisticsSession.GetStatInt("enemies-killed");
-			Print(m_initialKills);
+			auto player = GetLocalPlayerRecord();
+			m_initialKills = player.statisticsSession.GetStatInt("enemies-killed");
+			print(m_initialKills);
 			
 			m_dmgPower = ivec2(
 				GetParamInt(unit, params, "attack-power", false, 0),
@@ -30,22 +31,17 @@ namespace Modifiers
 		bool HasDamagePower() override { return true;}
 		bool HasDamageMul() override { return true; }
 		bool HasUpdate() override { return true; }
-	
-		void Update(int dt) override {
-			m_currentKills = player.m_record.statisticsSession.GetStatInt("enemies-killed");
-			Print(m_currentKills - m_initialKills);
-		}
 		
 		ivec2 DamagePower(PlayerBase@ player, Actor@ enemy) override {
 			return ivec2(
-				int(min(m_dmgPower.x , ((m_currentKills - m_initialKills) * m_dmgScale))),
-				int(min(m_dmgPower.y , ((m_currentKills - m_initialKills) * m_dmgScale)))); 
+				int(min(m_dmgPower.x , int((m_currentKills - m_initialKills) * m_dmgScale))),
+				int(min(m_dmgPower.y , int((m_currentKills - m_initialKills) * m_dmgScale)))); 
 		}
 		
 		ivec2 AttackDamageAdd(PlayerBase@ player, Actor@ enemy, DamageInfo@ di) override { 
 			return ivec2(
-				int(min(m_dmgAdd.x , ((m_currentKills - m_initialKills) * m_dmgScale))),
-				int(min(m_dmgAdd.y , ((m_currentKills - m_initialKills) * m_dmgScale)))); 
+				int(min(m_dmgAdd.x , int((m_currentKills - m_initialKills) * m_dmgScale))),
+				int(min(m_dmgAdd.y , int((m_currentKills - m_initialKills) * m_dmgScale)))); 
 		}
 		
 		vec2 DamageMul(PlayerBase@ player, Actor@ enemy) override{ 

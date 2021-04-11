@@ -1,7 +1,7 @@
 <loader order="2">AddSetFile</loader>
 <array>
 
-	<dict> <string name="name">Thaumature Gear</string>
+	<dict> <string name="name">Thaumaturge Gear</string>
 
 		<array name="items">
 			<string>silv-wand</string>
